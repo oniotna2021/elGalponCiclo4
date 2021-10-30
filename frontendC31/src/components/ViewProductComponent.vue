@@ -68,7 +68,7 @@ export default {
     };
   },
   created() {
-    let apiURL = "https://lit-atoll-21069.herokuapp.com/api";
+    let apiURL = "http://localhost:4000/api";
     axios
       .get(apiURL)
       .then((res) => {

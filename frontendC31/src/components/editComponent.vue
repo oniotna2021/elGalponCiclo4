@@ -101,7 +101,7 @@ export default {
     };
   },
   created() {
-    let apiURL = `https://lit-atoll-21069.herokuapp.com/api/search-product/${this.$route.params.id}`;
+    let apiURL = `http://localhost:4000/api/search-product/${this.$route.params.id}`;
 
     axios.get(apiURL).then((res) => {
       this.producto = res.data;
@@ -109,7 +109,7 @@ export default {
   },
   methods: {
     handleUpdateForm() {
-      let apiURL = `https://lit-atoll-21069.herokuapp.com/api/update-product/${this.$route.params.id}`;
+      let apiURL = `http://localhost:4000/api/update-product/${this.$route.params.id}`;
 
       axios
         .put(apiURL, this.producto)

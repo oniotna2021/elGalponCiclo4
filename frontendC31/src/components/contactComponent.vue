@@ -132,7 +132,7 @@ export default {
         },
         
         handleUpdateForm() {
-            let apiURL = `https://lit-atoll-21069.herokuapp.com/apimsg/create-msg`;
+            let apiURL = `http://localhost:4000/apimsg/create-msg`;
             if (this.$v.form.$anyError) {
                 return;
             }

@@ -20,6 +20,9 @@ npm run serve
 Get inside the Node server folder:
 cd backend
 
+begin
+node app
+
 Install the required packages:
 npm install
 

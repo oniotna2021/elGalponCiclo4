@@ -30,20 +30,20 @@
 
             <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
                 <h2>Lista de Usuarios</h2>
-                <div class="table-responsive">
-                    <table class="table table-striped table-sm">
+                <div >
+                    <table>
                         <thead>
                             <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellidos</th>
-                            <th scope="col">Email</th>
-                            <!-- <th scope="col">Password</th> -->
-                            <th scope="col">Telefono</th>
-                            <!-- <th scope="col">Pais</th> -->
-                            <th scope="col">Ciudad</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">Clasificacion</th>
-                            <th>acciones</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Email</th>
+                                <!-- <th scope="col">Password</th> -->
+                                <th scope="col">Telefono</th>
+                                <!-- <th scope="col">Pais</th> -->
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Clasificacion</th>
+                                <th scope="col">acciones</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -85,7 +85,7 @@ export default {
     };
   },
   created() {
-    let apiURL = "https://lit-atoll-21069.herokuapp.com/apiuser";
+    let apiURL = "http://localhost:4000/apiuser";
     axios
       .get(apiURL)
       .then((res) => {
@@ -116,7 +116,7 @@ export default {
   },
   methods: {
     deleteUser(id) {
-      let apiURL = `https://lit-atoll-21069.herokuapp.com/apiuser/delete-user/${id}`;
+      let apiURL = `http://localhost:4000/apiuser/delete-user/${id}`;
       let indexOfArrayItem = this.usuarios.findIndex((i) => i._id === id);
 
       if (window.confirm("desear eliminar El usuario?")) {
@@ -133,3 +133,59 @@ export default {
   },
 };
 </script>
+
+<style>
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		/*
+		Label the data
+		*/
+		td:nth-of-type(1):before { content: "Nombre"; }
+		td:nth-of-type(2):before { content: "Apellidos"; }
+		td:nth-of-type(3):before { content: "Email"; }
+		td:nth-of-type(4):before { content: "Telefono"; }
+		td:nth-of-type(5):before { content: "Ciudad"; }
+		td:nth-of-type(6):before { content: "Dirección"; }
+		td:nth-of-type(7):before { content: "Clasificación"; }
+		td:nth-of-type(8):before { content: "Acciones"; }
+	}
+</style>

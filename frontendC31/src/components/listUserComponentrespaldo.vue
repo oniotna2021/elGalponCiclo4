@@ -84,7 +84,7 @@ export default {
     };
   },
   created() {
-    let apiURL = "https://lit-atoll-21069.herokuapp.com/apiuser";
+    let apiURL = "http://localhost:4000/apiuser";
     axios
       .get(apiURL)
       .then((res) => {
@@ -104,7 +104,7 @@ export default {
   },
   methods: {
     deleteUser(id) {
-      let apiURL = `https://lit-atoll-21069.herokuapp.com/apiuser/delete-user/${id}`;
+      let apiURL = `http://localhost:4000/apiuser/delete-user/${id}`;
       let indexOfArrayItem = this.usuarios.findIndex((i) => i._id === id);
 
       if (window.confirm("desear eliminar El usuario?")) {

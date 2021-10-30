@@ -175,7 +175,7 @@ export default {
             });
         },
         handleUpdateForm() {
-            let apiURL = `https://lit-atoll-21069.herokuapp.com/apiuser/update-user/61637544a1ef8b0d14f3bb78`;
+            let apiURL = `http://localhost:4000/apiuser/update-user/61637544a1ef8b0d14f3bb78`;
 
             if (this.$v.form.$anyError) {
                 return;

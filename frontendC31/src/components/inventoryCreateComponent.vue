@@ -117,7 +117,7 @@ export default {
   },
   methods: {
     handleSubmitForm() {
-      let apiURL = "https://lit-atoll-21069.herokuapp.com/api/create-product";
+      let apiURL = "http://localhost:4000/api/create-product";
 
       axios
         .post(apiURL, this.producto)
