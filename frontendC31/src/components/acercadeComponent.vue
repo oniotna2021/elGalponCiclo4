@@ -1,27 +1,40 @@
 <template>
-<div class="container ">
-            <main>
-              <div  class="py-5 text-center" >
-                <!-- <img class="d-block mx-auto mb-4" src="" alt="" width="72" height="57"> -->
-                <h2 id="grey_texts">ACERCA DE AGROPECUARIA EL GALPON </h2>
-              </div>
-              <div class="row g-3">
-                    <div class="col-md-5 col-lg-4 ">
-                        <img src="../assets/logoB.jpg" alt="" width="300" height="400">
-                    </div>
-                    <!--NO PUDE INSERTAR IMAGEN<div clas="col">
-                        <img src="assets/logoB.jpg" alt="" width="60" height="40">
-                    </div>-->
-                    <div class="col-md-5 col-lg-8">
-                        <p id="grey_texts">
-                            Venta de Insumos agropecuarios, Concentrados y Alimentos para animales, Pollitos de Engorde, Droga Veterinaria, Implementos Avicolas, Sales Mineralizadas, Vacunas, Miel de Purga, Accesorios Caninos, Semillas, Instrumental e Implementos Veterinarios.
-                        </p>
-                    </div>
-
-                </div>
-            </main>
-        </div>
-        
+    <div class="contenedorQs">
+        <h1>¿Quiénes somos?</h1>
+        <p>
+          Somos la mejor distribuidora de productos agropecuarios en la región<br>
+          y una excelente prestadora de servicios veterinarios.
+        </p>
+        <figure>            
+            <img src="" alt="foto de la parte externa del negocio">
+            <img src="" alt="foto del interior del negocio">
+        </figure>
+        <p>Tenemos a su disposición:</p>
+        <ul>
+            <li>Insumos agropecuarios</li>
+            <li>Semillas</li>
+            <li>Concentrados y Alimentos para sus animales</li>
+            <li>Miel de Purga</li>
+            <li>Sales Mineralizadas</li>
+            <li>Pollitos de Engorde</li>
+            <li>Implementos Avicolas</li>
+            <li>Accesorios Caninos</li>
+        </ul>
+        <p>Además protegemos la salud de sus animales ofreciéndole:</p>
+        <ul>
+            <li>Contacto con veterinarios certificados</li>
+            <li>Drogas veterinarias</li>
+            <li>Vacunas</li>
+            <li>Instrumental e Implementos Veterinarios</li>
+        </ul>
+        <p>Somos distribuidores autorizados de:</p>
+        <ul>
+            <li>Sthill<img src="" alt=" -> icono de sthill"></li>
+            <li>Lhaura<img src="" alt=" -> icono de Lhaura"></li>
+            <li>Mejía & Compañía S.A.<img src="" alt=" -> icono de Mejia & Cia."></li>
+        </ul>
+        <p>Estamo ubicados en la carrera 6 # 6-43<br>Teléfono: 836-4368<br>Pitalito - Huila</p>
+    </div>
 </template>
 
 
