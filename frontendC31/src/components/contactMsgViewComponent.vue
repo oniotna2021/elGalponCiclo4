@@ -83,7 +83,7 @@ export default {
     };
   },
   created() {
-    let apiURL = `https://lit-atoll-21069.herokuapp.com/apimsg/search-msg/${this.$route.params.id}`;
+    let apiURL = `http://localhost:4000/apimsg/search-msg/${this.$route.params.id}`;
 
     axios.get(apiURL).then((res) => {
       this.mensaje = res.data;

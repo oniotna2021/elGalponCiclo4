@@ -188,7 +188,7 @@ export default {
             });
         },
         onSubmit() {
-            let apiURL = "https://lit-atoll-21069.herokuapp.com/api/create-user";
+            let apiURL = "http://localhost:4000/api/create-user";
 
             this.$v.form.$touch();
             if (this.$v.form.$anyError) {

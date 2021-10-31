@@ -193,7 +193,7 @@ export default {
   },
   methods: {
     handleSubmitForm() {
-      let apiURL = "http://localhost:4000/api/create-student";
+      let apiURL = "";
 
       axios
         .post(apiURL, this.student)

@@ -132,7 +132,7 @@ export default {
         };
     },
     created() {
-        let apiURL = `https://lit-atoll-21069.herokuapp.com/apiuser/search-user/${this.$route.params.id}`;
+        let apiURL = `http://localhost:4000/apiuser/search-user/${this.$route.params.id}`;
         axios.get(apiURL).then((res) => {
             this.usuario = res.data;
         });
@@ -203,7 +203,7 @@ export default {
             if (this.$v.form.$anyError) {
                 return;
             }
-            let apiURL = `https://lit-atoll-21069.herokuapp.com/apiuser/update-user/${this.$route.params.id}`;
+            let apiURL = `http://localhost:4000/apiuser/update-user/${this.$route.params.id}`;
 
             axios
                 .put(apiURL, this.$v.form.$model)
