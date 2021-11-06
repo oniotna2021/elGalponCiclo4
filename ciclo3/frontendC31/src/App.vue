@@ -121,6 +121,19 @@
                     />
                   </template>
                 </b-carousel-slide>
+
+                <b-carousel-slide>
+                  <template #img>
+                    <img
+                      class="d-block w-100"
+                      width="1024"
+                      height="356"
+                      src="./assets/banner4.jpg"
+                      alt="image slot"
+                    />
+                  </template>
+                </b-carousel-slide>
+
               </b-carousel>
             </div>
           </div>
