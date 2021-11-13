@@ -6,6 +6,7 @@ import { Link, Routes, Route} from 'react-router-dom';
 
 import Contacto from "./Components/Contacto";
 import Home from "./Components/Home";
+import Login from "./Components/Login/Login";
 import About from "./Components/About";
 import NotFound from "./Components/NotFound";
 import Category from "./Components/Category";
@@ -40,7 +41,7 @@ function App() {
               <li class="nav-item">
                 <Link class="nav-link" to="/Contacto">CONTACTO</Link>
               </li>   
-          <Link class="btn btn-link bg-black" to='/el_galpon_ciclo_4'>ENTRAR</Link>
+          <Link class="btn btn-link bg-black" to='/login'>ENTRAR</Link>
           <Link class="btn btn-link bg-black" to='/el_galpon_ciclo_4'>Salir</Link>
           </ul>
           <form class="d-flex">
@@ -62,7 +63,8 @@ function App() {
 
       <Routes>
          <Route path='/el_galpon_ciclo_4' element={<Home />}></Route>
-         <Route path='/Products' element={<ProductWrap />}>
+         <Route path='/login' element={<Login />}></Route>
+       <Route path='/Products' element={<ProductWrap />}>
             <Route path='/Products' element={<Products />}></Route>
             <Route path='/Products/:productId' element={<SpecificProduct />}></Route>
             <Route path='/Products/create' caseSensitive={false} element={<CrearProducto />}></Route>
