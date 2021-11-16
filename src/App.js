@@ -82,7 +82,7 @@ function App() {
   <Carousel.Item interval={3000}>
     <img
       className="d-block w-100"
-      src="https://solucionesamtec.com.co/galpon/banner1.jpg"
+      src="https://solucionesamtec.com.co/galpon/banner3.jpg"
       alt="Third slide"
     />
     <Carousel.Caption>
