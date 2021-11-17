@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
 import imgExterior from '../assets/egExterior.jpg'
 import imgInterior from '../assets/egInterior.jpg'
+import Footer from '../templates/Footer'
+import Carrusel from '../templates/Carrusel'
 
 export default class About extends Component {
     render() {
         return (
+            
+            <div>
+                <Carrusel />
             <div class="contenedorQs">
             <h1>¿Quiénes somos?</h1>
             <p>
@@ -40,6 +45,12 @@ export default class About extends Component {
                 <li>Mejía & Compañía S.A.<img src="" alt=" -> icono de Mejia & Cia." /></li>
             </ul>
             <p>Estamo ubicados en la carrera 6 # 6-43<br/>Teléfono: 836-4368<br/>Pitalito - Huila</p>
+
+            <br />
+            <br />
+            
+        </div>
+        <Footer></Footer>
         </div>
             )
     }
