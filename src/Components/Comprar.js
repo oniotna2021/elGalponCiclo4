@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Login from '../Components/Login/Login';
 import Footer from '../templates/Footer'
+import Carrusel from '../templates/Carrusel';
 
 
 export default class About extends Component {
@@ -19,6 +20,7 @@ export default class About extends Component {
     generateAppMenu(){
     return(
     <div>
+        <Carrusel />
         <br />
         <br />
         <br />
