@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/el_galpon_ciclo_4/static/css/main.952a3921.chunk.css",
-    "main.js": "/el_galpon_ciclo_4/static/js/main.e5e1e3d2.chunk.js",
-    "main.js.map": "/el_galpon_ciclo_4/static/js/main.e5e1e3d2.chunk.js.map",
-    "runtime-main.js": "/el_galpon_ciclo_4/static/js/runtime-main.9b4b78ea.js",
-    "runtime-main.js.map": "/el_galpon_ciclo_4/static/js/runtime-main.9b4b78ea.js.map",
-    "static/js/2.1a86a02f.chunk.js": "/el_galpon_ciclo_4/static/js/2.1a86a02f.chunk.js",
-    "static/js/2.1a86a02f.chunk.js.map": "/el_galpon_ciclo_4/static/js/2.1a86a02f.chunk.js.map",
-    "static/js/3.3e5f41dc.chunk.js": "/el_galpon_ciclo_4/static/js/3.3e5f41dc.chunk.js",
-    "static/js/3.3e5f41dc.chunk.js.map": "/el_galpon_ciclo_4/static/js/3.3e5f41dc.chunk.js.map",
+    "main.js": "/el_galpon_ciclo_4/static/js/main.bc661bb3.chunk.js",
+    "main.js.map": "/el_galpon_ciclo_4/static/js/main.bc661bb3.chunk.js.map",
+    "runtime-main.js": "/el_galpon_ciclo_4/static/js/runtime-main.a1be2f5d.js",
+    "runtime-main.js.map": "/el_galpon_ciclo_4/static/js/runtime-main.a1be2f5d.js.map",
+    "static/js/2.ba53560f.chunk.js": "/el_galpon_ciclo_4/static/js/2.ba53560f.chunk.js",
+    "static/js/2.ba53560f.chunk.js.map": "/el_galpon_ciclo_4/static/js/2.ba53560f.chunk.js.map",
+    "static/js/3.1c2b366a.chunk.js": "/el_galpon_ciclo_4/static/js/3.1c2b366a.chunk.js",
+    "static/js/3.1c2b366a.chunk.js.map": "/el_galpon_ciclo_4/static/js/3.1c2b366a.chunk.js.map",
     "index.html": "/el_galpon_ciclo_4/index.html",
     "static/css/main.952a3921.chunk.css.map": "/el_galpon_ciclo_4/static/css/main.952a3921.chunk.css.map",
-    "static/js/2.1a86a02f.chunk.js.LICENSE.txt": "/el_galpon_ciclo_4/static/js/2.1a86a02f.chunk.js.LICENSE.txt",
+    "static/js/2.ba53560f.chunk.js.LICENSE.txt": "/el_galpon_ciclo_4/static/js/2.ba53560f.chunk.js.LICENSE.txt",
     "static/media/egExterior.3db541a8.jpg": "/el_galpon_ciclo_4/static/media/egExterior.3db541a8.jpg",
     "static/media/egInterior.8ebc42c1.jpg": "/el_galpon_ciclo_4/static/media/egInterior.8ebc42c1.jpg",
     "static/media/logoB.468ed1ba.png": "/el_galpon_ciclo_4/static/media/logoB.468ed1ba.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9b4b78ea.js",
-    "static/js/2.1a86a02f.chunk.js",
+    "static/js/runtime-main.a1be2f5d.js",
+    "static/js/2.ba53560f.chunk.js",
     "static/css/main.952a3921.chunk.css",
-    "static/js/main.e5e1e3d2.chunk.js"
+    "static/js/main.bc661bb3.chunk.js"
   ]
 }
