@@ -16,7 +16,6 @@ export default class administrar extends Component {
                 <li class="nav-item">
                 <Link class="nav-link" to="/Products/edit">EDITAR PRODUCTO</Link>
               </li> 
-                <a>EDITAR PRODUCTO</a>
             </div>
         )
     }

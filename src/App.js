@@ -13,12 +13,11 @@ import Products from "./Components/Products/Products";
 import ProductWrap from "./Components/Products/ProductWrap";
 import CrearProducto from "./Components/Products/CrearProducto";
 import SpecificProduct from "./Components/Products/SpecificProduct";
-import EditarProducto from './Components/Products/EditarProducto';
 import Registrar from './Components/Registrar';
 import Administrar from './Components/Administrar';
 import Header from './templates/Header';
+import EditarProducto from './Components/Products/EditarProducto'
 import Editar from './Components/Editar';
-import Clientchange from './Components/Clientchange';
 
 
 
@@ -44,7 +43,6 @@ function App() {
          <Route path='/Registrar' element={<Registrar />}></Route>
          <Route path='/Administrar' element={<Administrar />}></Route>
          <Route path='/Editar' element={<Editar />}></Route>
-         <Route path='/Clientchange' element={<Clientchange />}></Route>
 
 
        </Routes>

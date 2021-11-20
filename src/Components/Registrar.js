@@ -27,6 +27,7 @@ export default class Registrar extends Component {
         fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
             method:'POST',
             body: JSON.stringify(this.state),
+            mode:'cors',
             headers:{
                 'Accept':'application/json',
                 'Content-Type':'application/json'
