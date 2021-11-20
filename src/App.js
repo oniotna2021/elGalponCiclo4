@@ -14,6 +14,7 @@ import ProductWrap from "./Components/Products/ProductWrap";
 import CrearProducto from "./Components/Products/CrearProducto";
 import SpecificProduct from "./Components/Products/SpecificProduct";
 import Registrar from './Components/Registrar';
+import Administrar from './Components/Administrar';
 
 import Header from './templates/Header';
 
@@ -38,6 +39,7 @@ function App() {
          <Route path='/Contacto' element={<Contacto />}></Route>
          <Route path='/Comprar' element={<Comprar />}></Route>
          <Route path='/Registrar' element={<Registrar />}></Route>
+         <Route path='/Administrar' element={<Administrar />}></Route>
 
 
        </Routes>

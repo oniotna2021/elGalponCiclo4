@@ -20,7 +20,7 @@ export default class CrearProducto extends Component {
     }
 
     agregarProducto(e){
-        fetch('http://localhost:4000/api/producto',{
+        fetch('https://backend-galpon-c4.herokuapp.com/api/producto',{
             method:'POST',
             body: JSON.stringify(this.state),
             headers:{
@@ -71,27 +71,27 @@ export default class CrearProducto extends Component {
                                 <div class="row g-3">
                                     <div class="col-sm-6">
                                         <label for="productId" class="form-label">Codigo Interno</label>
-                                        <input name="productId" onChange={this.handleChange} type="text" class="form-control" id="productId" /> 
+                                        <input name="productId" onChange={this.handleChange} type="text" class="form-control" id="productId" required/> 
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="nombre" class="form-label">Nombre del Producto</label>
-                                        <input name="nombre" onChange={this.handleChange} type="text" class="form-control" id="nombre" /> 
+                                        <input name="nombre" onChange={this.handleChange} type="text" class="form-control" id="nombre" required/> 
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="unidades" class="form-label">Unidades</label>
-                                        <input name="unidades" onChange={this.handleChange} type="text" class="form-control" id="unidades" />
+                                        <input name="unidades" onChange={this.handleChange} type="text" class="form-control" id="unidades" required/>
                                     </div>
                                     <div class="col-6">
                                         <label for="precio_compra" class="form-label">Precio de Compra </label>
-                                        <input name="precio_compra" onChange={this.handleChange} type="text" class="form-control" id="precio_compra" />
+                                        <input name="precio_compra" onChange={this.handleChange} type="text" class="form-control" id="precio_compra" required/>
                                      </div>
                                     <div class="col-6">
                                         <label for="precio_venta" class="form-label">Precio de Venta</label>
-                                        <input name="precio_venta" onChange={this.handleChange} type="text" class="form-control" id="precio_venta" />
+                                        <input name="precio_venta" onChange={this.handleChange} type="text" class="form-control" id="precio_venta" required/>
                                     </div>
                                     <div class="col-12">
                                         <label for="detalle" class="form-label">Detalle</label>
-                                        <input name="detalle" onChange={this.handleChange} type="text" class="form-control" id="detalle" />
+                                        <input name="detalle" onChange={this.handleChange} type="text" class="form-control" id="detalle" required/>
                                   </div>
                                     <div class="col-md-5">
                                         <label for="categoria" class="form-label">Categoria</label>
@@ -106,11 +106,11 @@ export default class CrearProducto extends Component {
                                     </div>          
                                     <div class="col-12">
                                         <label for="imagen" class="form-label">URL de la imagen</label>
-                                        <input name="imagen" onChange={this.handleChange} type="text" class="form-control" id="imagen" />
+                                        <input name="imagen" onChange={this.handleChange} type="text" class="form-control" id="imagen" required/>
                                     </div>
                                     <div class="col-12">
                                         <label for="__v" class="form-label">Version</label>
-                                        <input name="__v" onChange={this.handleChange} type="text" class="form-control" id="__v" />
+                                        <input name="__v" onChange={this.handleChange} type="text" class="form-control" id="__v" required/>
                                     </div>
                                 </div>
                                 <hr class="my-4" />

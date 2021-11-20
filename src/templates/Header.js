@@ -32,6 +32,9 @@ export default class Header extends Component {
                 <Link class="nav-link" to="/Registrar">REGISTRAR</Link>
               </li>  
               <li class="nav-item">
+                <Link class="nav-link" to="/Administrar">ADMINISTRAR</Link>
+              </li>   
+              <li class="nav-item">
                 <button class="btn btn-sm btn-outline-secondary" type="submit">
                   <Link class="nav-link" to="/Comprar">
                   COMPRAR
@@ -44,7 +47,8 @@ export default class Header extends Component {
                     Salir
                   </Link>
                 </button> 
-              </li>   
+              </li>
+                
           {/* <Link class="btn btn-link bg-black" to='/login'>ENTRAR</Link> */}
           
           </ul>

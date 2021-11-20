@@ -29,7 +29,7 @@ export default class Home extends Component {
     }
 
     fetchProductos(){
-        fetch('http://localhost:4000/api/producto')
+        fetch('https://backend-galpon-c4.herokuapp.com/api/producto')
         .then(res => res.json())
         .then(data => {
             this.setState({productos: data});
