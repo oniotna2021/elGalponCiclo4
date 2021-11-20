@@ -27,12 +27,26 @@ export default class Header extends Component {
               </li>
               <li class="nav-item">
                 <Link class="nav-link" to="/Contacto">CONTACTO</Link>
+              </li> 
+              <li class="nav-item">
+                <Link class="nav-link" to="/Registrar">REGISTRAR</Link>
               </li>  
               <li class="nav-item">
-                <Link class="nav-link" to="/Comprar">COMPRAR</Link>
-              </li>    
+                <button class="btn btn-sm btn-outline-secondary" type="submit">
+                  <Link class="nav-link" to="/Comprar">
+                  COMPRAR
+                  <i class="bi-cart-fill me-1"></i>
+                  <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                  </Link>
+                </button> 
+                <button class="btn btn-sm btn-outline-secondary" type="submit">
+                  <Link class="btn" to='/el_galpon_ciclo_4'>
+                    Salir
+                  </Link>
+                </button> 
+              </li>   
           {/* <Link class="btn btn-link bg-black" to='/login'>ENTRAR</Link> */}
-          <Link class="btn btn-link bg-black" to='/el_galpon_ciclo_4'>Salir</Link>
+          
           </ul>
           <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

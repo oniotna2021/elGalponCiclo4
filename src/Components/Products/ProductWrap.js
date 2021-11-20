@@ -5,7 +5,9 @@ export default class ProductWrap extends Component {
     render() {
         return (
             <div>
-                <h2>Welcome to Products page Wrap</h2>
+                <br />
+                <h2>SECCION PRODUCTOS</h2>
+                <br />
                 <Outlet/>
             </div>
         )

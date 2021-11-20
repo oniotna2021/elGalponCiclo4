@@ -1,37 +1,45 @@
-import React, { Component } from 'react'
-import '../../App.css'
-import { credentials } from '../../db';
-import Carrusel from '../../templates/Carrusel';
-import Footer from '../../templates/Footer';
+import React, { Component } from "react";
+import "../../App.css";
+import { credentials } from "../../db";
+import Carrusel from "../../templates/Carrusel";
+import Footer from "../../templates/Footer";
+import { urlHome } from "../../Backend";
+import { Axios } from "axios";
+
+const axios = new Axios();
+
+const baseurl="";
 
 
 export default class Login extends Component {
 
-    constructor(props){
-        super(props);
-        this.state={
-            username:'',
-            password:'',
-            email:'',
-            recoverPassword:false,
-        };
-        this.handleChange=this.handleChange.bind(this);
-        this.handleClick=this.handleClick.bind(this);
-        this.handleToUpdate = this.props.updateLogStateLOGIN;
-        this.handleRecoverClick = this.handleRecoverClick.bind(this)
-        this.recoverContraseña = this.recoverContraseña.bind(this)
-        this.cancel = this.cancel.bind(this)
+  state={
+      form:{
+          username:'',
+          password:''
+      }
+  }
+
+    handleChange= async e=>{
+        await this.setState({
+            form:{
+                ...this.state.form,
+                [e.target.name]:e.target.value
+            }
+        });
+        console.log(this.state.form)
     }
 
-    async handleChange(e){
-        if(e.target.name==='password'){
-            await this.setState({password: e.target.value});
-        }else if(e.target.name ==='email'){
-            await this.setState({email: e.target.value});
-        }else{
-            await this.setState({username: e.target.value});
-        }       
-       console.log(this.state) 
+    iniciarSesion=async ()=>{
+        
+         await axios.get(baseurl, {params: {
+            username:this.state.form.username,
+            password:this.state.form.password
+        }}).then(response=>{
+            console.log(response)
+        }).catch(error=>{
+            console.log(error);
+        })
     }
 
     async handleRecoverClick(e){
@@ -53,36 +61,32 @@ export default class Login extends Component {
     }
 
     async handleClick(){
-        let thisReference = this;
-        let isValidCredentials = false;
-        let name='';
+        // let axios = new Axios();
+        // let thisReference = this;
+        // let isValidCredentials = false;
+        // let name='';
         //Aqui se colocan las validaciones para inicio de sesion
-        if(this.state.username.length < 3 ||  this.state.password.length < 3 ){
-            alert('Ususario y contraseña minimo 3 caracteres')
-            return;
-        }
-        console.log(isValidCredentials)
-       Object.entries(credentials).forEach(function(k) {
-            //    console.log(k)
-            if(
-                k[1].username === thisReference.state.username &&
-                k[1].password === thisReference.state.password
-                ){
-                    name=k[1].nombre;
-                    isValidCredentials = true;
 
-                }
-           });
-           if(isValidCredentials){
-               alert('login exitoso');
-               this.handleToUpdate(true,this.state.username,name)
-           }else{
-               alert('Usuario y/o contraseña erroneas')
-               this.handleToUpdate(false,'','')
-           }
-           
-        // alert(JSON.stringify(this.state));
-        // console.log(e)
+        // if(this.form.username.length < 3 ||  this.form.password.length < 3 ){
+        //     alert('Ususario y contraseña minimo 3 caracteres')
+        //     return;
+        // }
+
+        // let response = await axios.get(urlHome+'credentials',{
+        //     data:{
+        //         user: {},
+        //         data:{
+        //             username: this.state.username,
+        //             password: this.state.password,
+        //         },
+        //     },
+                
+        //     });
+        // console.log(response)
+      
+
+
+       
     }
 
     cancel(){
@@ -137,7 +141,7 @@ export default class Login extends Component {
                         <br />
                         <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
                         <br />
-                        <input type="button" onClick={this.handleClick} value='Entrar' />
+                        <input type="button" onClick={()=>this.iniciarSesion()} value='Entrar' />
                         <input type="button" onClick={this.recoverContraseña} value='Recuperar contraseña' />
 
                     </form>
