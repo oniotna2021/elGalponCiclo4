@@ -9,8 +9,13 @@ export default class administrar extends Component {
                 <Link class="nav-link" to="/products/create">CREAR PRODUCTO</Link>
               </li>  
                 <br />
-                <a>EDITAR USUARIO</a>
+                <li class="nav-item">
+                <Link class="nav-link" to="/Editar">EDITAR CLIENTE</Link>
+              </li> 
                 <br />
+                <li class="nav-item">
+                <Link class="nav-link" to="/Products/edit">EDITAR PRODUCTO</Link>
+              </li> 
                 <a>EDITAR PRODUCTO</a>
             </div>
         )

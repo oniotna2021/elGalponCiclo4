@@ -13,10 +13,12 @@ import Products from "./Components/Products/Products";
 import ProductWrap from "./Components/Products/ProductWrap";
 import CrearProducto from "./Components/Products/CrearProducto";
 import SpecificProduct from "./Components/Products/SpecificProduct";
+import EditarProducto from './Components/Products/EditarProducto';
 import Registrar from './Components/Registrar';
 import Administrar from './Components/Administrar';
-
 import Header from './templates/Header';
+import Editar from './Components/Editar';
+import Clientchange from './Components/Clientchange';
 
 
 
@@ -33,6 +35,7 @@ function App() {
             <Route path='/Products' element={<Products />}></Route>
             <Route path='/Products/:productId' element={<SpecificProduct />}></Route>
             <Route path='/Products/create' caseSensitive={false} element={<CrearProducto />}></Route>
+            <Route path='/Products/edit' caseSensitive={false} element={<EditarProducto />}></Route>
          </Route>
          <Route path='/About' element={<About />}></Route>
          <Route path='*' element={<NotFound />}></Route>
@@ -40,6 +43,8 @@ function App() {
          <Route path='/Comprar' element={<Comprar />}></Route>
          <Route path='/Registrar' element={<Registrar />}></Route>
          <Route path='/Administrar' element={<Administrar />}></Route>
+         <Route path='/Editar' element={<Editar />}></Route>
+         <Route path='/Clientchange' element={<Clientchange />}></Route>
 
 
        </Routes>
