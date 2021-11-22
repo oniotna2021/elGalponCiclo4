@@ -39,7 +39,7 @@ export default class EditarProducto extends Component {
   }
 
 
-    fetchProductos(){
+fetchProductos(){
         fetch('https://backend-galpon-c4.herokuapp.com/api/producto',{
           METHOD: 'GET',
           headers: {
@@ -55,7 +55,7 @@ export default class EditarProducto extends Component {
         });
         }
 
-        llamarProducto(id){
+llamarProducto(id){
           const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
           console.log(url);
           fetch(url,{
@@ -74,10 +74,9 @@ export default class EditarProducto extends Component {
            
         }
 
-    eliminarProducto(id){
+  eliminarProducto(id){
       // eslint-disable-next-line no-restricted-globals
       if (confirm('Desea borrar este producto ?')){
-
      
         console.log('Eliminando',id);
         let url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
@@ -114,7 +113,7 @@ export default class EditarProducto extends Component {
         return (
             <div>
                 <div class="home container">
-   <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATTIVO</h2>
+   <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATIVO</h2>
    
    
    
@@ -126,7 +125,7 @@ export default class EditarProducto extends Component {
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="nombre" class="form-label">Nombre del Producto</label>
-                                        <input placeholder={this.state.productocarga.nombre} name="nombre" onChange={this.handleChange} type="text" class="form-control" id="nombre" required/> 
+                                        <input  value={this.state.productocarga.nombre}placeholder={this.state.productocarga.nombre} name="nombre" onChange={this.handleChange} type="text" class="form-control" id="nombre" required/> 
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="unidades" class="form-label">Unidades</label>
@@ -142,26 +141,19 @@ export default class EditarProducto extends Component {
                                     </div>
                                     <div class="col-12">
                                         <label for="detalle" class="form-label">Detalle</label>
-                                        <input placeholder={this.state.productocarga.detalle} name="detalle" onChange={this.handleChange} type="text" class="form-control" id="detalle" required/>
+                                        <input  value={this.state.productocarga.detalle}placeholder={this.state.productocarga.detalle} name="detalle" onChange={this.handleChange} type="text" class="form-control" id="detalle" required/>
                                   </div>
                                     <div class="col-md-5">
                                         <label for="categoria" class="form-label">Categoria</label>
-                                        <select name="categoria" onChange={this.handleChange} class="form-select" id="categoria" required>
-                                            <option value="">Elige...</option>
-                                            <option>Avicultura</option>
-                                            <option>Equinos</option>
-                                            <option>Ganaderia</option>
-                                            <option>Mascotas</option>
-                                            <option>Porcicultura</option>
-                                        </select>
+                                        <input  value={this.state.productocarga.categoria} placeholder={this.state.productocarga.categoria} name="detalle" onChange={this.handleChange} type="text" class="form-control" id="detalle" required/>
                                     </div>          
                                     <div class="col-12">
                                         <label for="imagen" class="form-label">URL de la imagen</label>
-                                        <input placeholder={this.state.productocarga.imagen} name="imagen" onChange={this.handleChange} type="text" class="form-control" id="imagen" required/>
+                                        <input value={this.state.productocarga.imagen} placeholder={this.state.productocarga.imagen} name="imagen" onChange={this.handleChange} type="text" class="form-control" id="imagen" required/>
                                     </div>
                                     <div class="col-12">
                                         <label for="__v" class="form-label">Version</label>
-                                        <input placeholder={this.state.productocarga.__v} name="__v" onChange={this.handleChange} type="text" class="form-control" id="__v" required/>
+                                        <input value={this.state.productocarga.__v} placeholder={this.state.productocarga.__v} name="__v" onChange={this.handleChange} type="text" class="form-control" id="__v" required/>
                                     </div>
                                 </div>
                                 <hr class="my-4" />
@@ -174,8 +166,10 @@ export default class EditarProducto extends Component {
    <table class="table">
             <thead class="bg--sucess">
               <tr>
-                <th scope="col">Id de producto</th>
-                <th scope="col">Nombre de Producto</th>
+                <th scope="col mg-2">Nombre del producto</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">Precio compra</th>
+                <th scope="col">Precio venta</th>
                 <th scope="col">Accion</th>
                 
               </tr>
@@ -188,11 +182,13 @@ export default class EditarProducto extends Component {
             <table class="table">
             <tbody>
               <tr key={producto._id}>
-                <td> {producto._id} </td>
-                <td>{producto.nombre} </td>
-                <td>
-                <button class="btn btn-success" onClick={()=> this.llamarProducto(producto._id) }>Editar</button>
-                <button class="btn btn-danger" onClick={()=> this.eliminarProducto(producto._id) }>Eliminar</button>
+                <td className="col-md-4">{producto.nombre} </td>
+                <td className="col-md-1">{producto.unidades} </td>
+                <td className="col-md-3">{producto.precio_compra} </td>
+                <td>{producto.precio_venta}</td>
+                <td className="col-md-1">
+                <button className="btn btn-success" onClick={()=> this.llamarProducto(producto._id) }>Editar</button>
+                <button className="btn btn-danger" onClick={()=> this.eliminarProducto(producto._id) }>Eliminar</button>
                 </td>
                 
               </tr>
