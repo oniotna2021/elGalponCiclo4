@@ -127,7 +127,7 @@ llamarProducto(id){
           password: ''   
       });
   })
-  .then( alert('Usuario actualizado'))
+  .then( alert('Producto actualizado'))
   .catch(err => console.error(err))
   // console.log(this.state);
 }

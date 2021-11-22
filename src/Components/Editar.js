@@ -104,7 +104,6 @@ export default class Editar extends Component {
     let url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
     console.log(url)
     console.log(this.state)
-    alert('el state y la url')
     fetch(url,{
       method:'PUT',
       body: JSON.stringify(this.state),
