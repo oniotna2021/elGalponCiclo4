@@ -52,24 +52,8 @@ export default class Editar extends Component {
 
     handleChange(e){
       const {name,value} = e.target;
-      // const apellidoCargado=this.state.clientecarga.apellido;
-      const emailCargado=this.state.clientecarga.email;
-      // const telefonoCargado=this.state.clientecarga.telefono;
-      const paisCargado=this.state.clientecarga.pais;
-      const ciudadCargado=this.state.clientecarga.ciudad;
-      const direccioCargado=this.state.clientecarga.direccion;
-      const clasificacionCargado=this.state.clientecarga.email;
-      const passwordCargado=this.state.clientecarga.password;
       this.setState({
-          [name]:value,
-          // apellido:apellidoCargado,
-          email:emailCargado,
-          // telefono:telefonoCargado,
-          pais:paisCargado,
-          ciudad:ciudadCargado,
-          direccio:direccioCargado,
-          clasificacion:clasificacionCargado,
-          password:passwordCargado
+          [name]:value
       });
       console.log(e.target.value);
   }
@@ -117,16 +101,10 @@ export default class Editar extends Component {
   }
 
   editarCliente(id,email){
-    console.log(this.state.clientecarga);
-    alert('Actualizar nombre, apellido, telefono');
     let url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
-    console.log(url);
-    const emailCargado=this.state.clientecarga.email;
-    console.log(emailCargado)
-    
-   
+    console.log(url)
     console.log(this.state)
-    
+    alert('el state y la url')
     fetch(url,{
       method:'PUT',
       body: JSON.stringify(this.state),
@@ -166,7 +144,7 @@ export default class Editar extends Component {
    <h3 class="text-center fw-bold super-container mt-3">Actualizar nombre, apellido, telefono</h3>
    
    
-   <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id,this.state.clientecarga.nombre) }>
+   <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id) }>
                 <div className="container">
                 
                 <div class="mb-3 row">
@@ -182,19 +160,19 @@ export default class Editar extends Component {
                          <input placeholder={this.state.clientecarga.apellido} name="apellido" onChange={this.handleChange} type="text" class="form-control" id="apellido" required/>
                     </div>
                 </div>
-                <div class="mb-3 row">
+                {/* <div class="mb-3 row">
                     <label for="Email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                          <input value={this.state.clientecarga.email} onChange={this.handleChange} name="email" type="email" class="form-control" id="Email" />
                  </div>
-                </div>
+                </div> */}
                 <div class="mb-3 row">
                     <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
                     <div class="col-sm-10">
                          <input placeholder={this.state.clientecarga.telefono} name="telefono" onChange={this.handleChange} type="text" class="form-control" id="telefono" required/>
                     </div>
                 </div>
-                <div class="mb-3 row">
+                {/* <div class="mb-3 row">
                     <label for="Pais" class="col-sm-2 col-form-label">Pais</label>
                     <div class="col-sm-10">
                          <input value={this.state.clientecarga.pais} name="pais" onChange={this.handleChange} type="text" class="form-control" id="pais" />
@@ -223,7 +201,7 @@ export default class Editar extends Component {
                     <div class="col-sm-10">
                          <input value={this.state.clientecarga.password} name="password" onChange={this.handleChange} type="password" class="form-control" id="password" />
                      </div>
-                </div>
+                </div> */}
                
                 <button type="submit" className="btn btn-dark">ACTUALIZAR</button>
                

@@ -31,22 +31,9 @@ export default class EditarProducto extends Component {
     }
 
     handleChange(e){
-      const {name,value} = e.target;
-      const productIdCargado=this.state.productocarga.productId;
-      const nombreCargado=this.state.productocarga.nombre;
-      const detalleCargado=this.state.productocarga.detalle;
-      const categoriaCargado=this.state.productocarga.categoria;
-      const imagenCargado=this.state.productocarga.imagen;
-      const __vCargado=this.state.productocarga.__v;
-            
+      const {name,value} = e.target;      
       this.setState({
           [name]:value,
-          productId:productIdCargado,
-          nombre: nombreCargado,    
-          detalle:detalleCargado,
-          categoria:categoriaCargado,
-          imagen:imagenCargado,
-          __v:__vCargado
       });
       console.log(e.target.value);
     
@@ -113,17 +100,41 @@ llamarProducto(id){
   }
 
   editarProducto(id){
-    console.log('actualizando '+id)
-    const url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id
-    
+    const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
     console.log(url)
     console.log(this.state)
- 
-    axios.put(url, this.state)
-    alert('prodcuto actualizado')
-
-
+    alert('la url y el state')
+    fetch(url,{
+      method:'PUT',
+      body: JSON.stringify(this.state),
+      mode:'cors',
+      headers:{
+          'Accept':'application/json',
+          'Content-Type':'application/json'
+      }
+  }).then(res => res.json())
+  .then(data => {
+      console.log(data);
+      this.setState({
+          nombre:'',
+          apellido: '',
+          email: '',
+          telefono: '',
+          pais: '',
+          ciudad: '',
+          direccion: '',
+          clasificacion: '',
+          password: ''   
+      });
+  })
+  .then( alert('Usuario actualizado'))
+  .catch(err => console.error(err))
+  // console.log(this.state);
 }
+
+
+
+
     render() {
         return (
             <div>
@@ -136,14 +147,6 @@ llamarProducto(id){
    <form onSubmit={()=> this.editarProducto(this.state.productocarga._id)} class="needs-validation" >
                                 <div class="row g-3">
                                     <div class="col-sm-6">
-                                        <label for="productId" class="form-label">Codigo Interno</label>
-                                        <input value={this.state.productocarga.productId} name="productId" onChange={this.handleChange} type="text" class="form-control" id="productId" required/> 
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label for="nombre" class="form-label">Nombre del Producto</label>
-                                        <input  value={this.state.productocarga.nombre} name="nombre" onChange={this.handleChange} type="text" class="form-control" id="nombre" required/> 
-                                    </div>
-                                    <div class="col-sm-6">
                                         <label for="unidades" class="form-label">Unidades</label>
                                         <input placeholder={this.state.productocarga.unidades} name="unidades" onChange={this.handleChange} type="text" class="form-control" id="unidades" required/>
                                     </div>
@@ -155,22 +158,7 @@ llamarProducto(id){
                                         <label for="precio_venta" class="form-label">Precio de Venta</label>
                                         <input placeholder={this.state.productocarga.precio_venta} name="precio_venta" onChange={this.handleChange} type="text" class="form-control" id="precio_venta" required/>
                                     </div>
-                                    <div class="col-12">
-                                        <label for="detalle" class="form-label">Detalle</label>
-                                        <input  value={this.state.productocarga.detalle} name="detalle" onChange={this.handleChange} type="text" class="form-control" id="detalle" required/>
-                                  </div>
-                                    <div class="col-md-5">
-                                        <label for="categoria" class="form-label">Categoria</label>
-                                        <input value={this.state.productocarga.categoria} name="categoria" onChange={this.handleChange} type="text" class="form-control" id="detalle" required/>
-                                    </div>          
-                                    <div class="col-12">
-                                        <label for="imagen" class="form-label">URL de la imagen</label>
-                                        <input value={this.state.productocarga.imagen} name="imagen" onChange={this.handleChange} type="text" class="form-control" id="imagen" required/>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="__v" class="form-label">Version</label>
-                                        <input value={this.state.productocarga.__v} name="__v" onChange={this.handleChange} type="text" class="form-control" id="__v" required/>
-                                    </div>
+                                   
                                 </div>
                                 <hr class="my-4" />
                                 <button type="submit" className="btn btn-dark">ACTUALIZAR</button>
