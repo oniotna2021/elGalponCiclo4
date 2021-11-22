@@ -8,7 +8,7 @@ export default class About extends Component {
     constructor(props){
         super(props);
         this.state ={
-          logged:false,
+          logged:true,
           username:"",
           name:"",
         };
