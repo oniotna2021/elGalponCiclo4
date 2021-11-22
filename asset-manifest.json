@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/el_galpon_ciclo_4/static/css/main.14d88e9e.chunk.css",
-    "main.js": "/el_galpon_ciclo_4/static/js/main.1f652b73.chunk.js",
-    "main.js.map": "/el_galpon_ciclo_4/static/js/main.1f652b73.chunk.js.map",
-    "runtime-main.js": "/el_galpon_ciclo_4/static/js/runtime-main.f3e11a66.js",
-    "runtime-main.js.map": "/el_galpon_ciclo_4/static/js/runtime-main.f3e11a66.js.map",
-    "static/js/2.480ebf45.chunk.js": "/el_galpon_ciclo_4/static/js/2.480ebf45.chunk.js",
-    "static/js/2.480ebf45.chunk.js.map": "/el_galpon_ciclo_4/static/js/2.480ebf45.chunk.js.map",
-    "static/js/3.06ef7b67.chunk.js": "/el_galpon_ciclo_4/static/js/3.06ef7b67.chunk.js",
-    "static/js/3.06ef7b67.chunk.js.map": "/el_galpon_ciclo_4/static/js/3.06ef7b67.chunk.js.map",
+    "main.css": "/el_galpon_ciclo_4/static/css/main.6cd3221e.chunk.css",
+    "main.js": "/el_galpon_ciclo_4/static/js/main.21ed9c06.chunk.js",
+    "main.js.map": "/el_galpon_ciclo_4/static/js/main.21ed9c06.chunk.js.map",
+    "runtime-main.js": "/el_galpon_ciclo_4/static/js/runtime-main.2f8d0a15.js",
+    "runtime-main.js.map": "/el_galpon_ciclo_4/static/js/runtime-main.2f8d0a15.js.map",
+    "static/js/2.21a3a8fd.chunk.js": "/el_galpon_ciclo_4/static/js/2.21a3a8fd.chunk.js",
+    "static/js/2.21a3a8fd.chunk.js.map": "/el_galpon_ciclo_4/static/js/2.21a3a8fd.chunk.js.map",
+    "static/js/3.0ca9988f.chunk.js": "/el_galpon_ciclo_4/static/js/3.0ca9988f.chunk.js",
+    "static/js/3.0ca9988f.chunk.js.map": "/el_galpon_ciclo_4/static/js/3.0ca9988f.chunk.js.map",
     "index.html": "/el_galpon_ciclo_4/index.html",
-    "static/css/main.14d88e9e.chunk.css.map": "/el_galpon_ciclo_4/static/css/main.14d88e9e.chunk.css.map",
-    "static/js/2.480ebf45.chunk.js.LICENSE.txt": "/el_galpon_ciclo_4/static/js/2.480ebf45.chunk.js.LICENSE.txt",
+    "static/css/main.6cd3221e.chunk.css.map": "/el_galpon_ciclo_4/static/css/main.6cd3221e.chunk.css.map",
+    "static/js/2.21a3a8fd.chunk.js.LICENSE.txt": "/el_galpon_ciclo_4/static/js/2.21a3a8fd.chunk.js.LICENSE.txt",
     "static/media/egExterior.3db541a8.jpg": "/el_galpon_ciclo_4/static/media/egExterior.3db541a8.jpg",
     "static/media/egInterior.8ebc42c1.jpg": "/el_galpon_ciclo_4/static/media/egInterior.8ebc42c1.jpg",
     "static/media/style.css": "/el_galpon_ciclo_4/static/media/molla0ab2.dbaa541f.ttf",
     "static/media/logoB.468ed1ba.png": "/el_galpon_ciclo_4/static/media/logoB.468ed1ba.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3e11a66.js",
-    "static/js/2.480ebf45.chunk.js",
-    "static/css/main.14d88e9e.chunk.css",
-    "static/js/main.1f652b73.chunk.js"
+    "static/js/runtime-main.2f8d0a15.js",
+    "static/js/2.21a3a8fd.chunk.js",
+    "static/css/main.6cd3221e.chunk.css",
+    "static/js/main.21ed9c06.chunk.js"
   ]
 }
