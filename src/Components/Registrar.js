@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel'
+// import bcrypt from 'bcrypt'
 
 
 
@@ -23,8 +24,17 @@ export default class Registrar extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    agregarCliente(e){
-        fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
+    async agregarCliente(e){
+            /* const clave=this.state.password
+            console.log(clave)
+            const encryp=await bcrypt.genSalt(10);
+            const clavencrypt=await bcrypt.hash(clave, encryp);
+            console.log(clavencrypt)
+            this.setState({password:clavencrypt})
+            alert('clave encryptada')
+            console.log(this.state) */
+        
+            fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
             method:'POST',
             body: JSON.stringify(this.state),
             mode:'cors',
