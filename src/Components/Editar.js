@@ -163,6 +163,7 @@ export default class Editar extends Component {
             <div>
                 <div class="home container">
    <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATTIVO</h2>
+   <h3 class="text-center fw-bold super-container mt-3">Actualizar nombre, apellido, telefono</h3>
    
    
    <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id,this.state.clientecarga.nombre) }>
