@@ -110,7 +110,6 @@ llamarProducto(id){
     const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
     console.log(url)
     console.log(this.state)
-    alert('confirma')
     fetch(url,{
       method:'PUT',
       body: JSON.stringify(this.state),

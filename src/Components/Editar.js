@@ -34,11 +34,18 @@ export default class Editar extends Component {
     componentDidMount(){
         this.fetchClientes();
     }
-    
+
     handleChange(e){
       const {name,value} = e.target;      
       this.setState({
           [name]:value,
+            email:  this.state.clientecarga.email,
+            pais:  this.state.clientecarga.pais,
+            ciudad:  this.state.clientecarga.ciudad,
+            direccion:  this.state.clientecarga.direccion,
+            clasificacion:  this.state.clientecarga.clasificacion,
+            password:  this.state.clientecarga.password 
+
       });
       console.log(e.target.value);
     
@@ -64,13 +71,6 @@ export default class Editar extends Component {
         
     }
 
-    handleChange(e){
-      const {name,value} = e.target;
-      this.setState({
-          [name]:value
-      });
-      console.log(e.target.value);
-  }
 
 
     llamarCliente(id){
