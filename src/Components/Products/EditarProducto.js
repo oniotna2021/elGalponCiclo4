@@ -40,7 +40,7 @@ export default class EditarProducto extends Component {
 
 
 fetchProductos(){
-        fetch('http://localhost:4000/api/producto/',{
+        fetch('https://backend-galpon-c4.herokuapp.com/api/producto/',{
           METHOD: 'GET',
           headers: {
             'Accept': 'aplication/json',
@@ -56,7 +56,7 @@ fetchProductos(){
         }
 
 llamarProducto(id){
-          const url='http://localhost:4000/api/producto/'+id;
+          const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
           console.log(url);
           fetch(url,{
             METHOD: 'GET',
@@ -80,7 +80,7 @@ llamarProducto(id){
        
        // https://backend-galpon-c4.herokuapp.com/api/producto/
         console.log('Eliminando',id);
-        let url='http://localhost:4000/api/producto/'+id;
+        let url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
         console.log(url);
         fetch(url,{
           method: 'DELETE',
@@ -100,7 +100,7 @@ llamarProducto(id){
   }
 
   editarProducto(id,e){
-    const url='http://localhost:4000/api/producto/'+id;
+    const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
     console.log(url)
     console.log(this.state)
     fetch(url,{

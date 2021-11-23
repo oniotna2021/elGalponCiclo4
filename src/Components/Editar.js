@@ -64,8 +64,7 @@ export default class Editar extends Component {
 
 
     llamarCliente(id){
-     // https://backend-galpon-c4.herokuapp.com/api/cliente/
-      const url='http://localhost:4000/api/cliente/'+id;
+      const url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
       fetch(url,{
         METHOD: 'GET',
         headers: {
@@ -85,7 +84,7 @@ export default class Editar extends Component {
       if (confirm('Desea borrar este usuario ?')){
 
         console.log('Eliminando',id);
-        const url='http://localhost:4000/api/cliente/'+id;
+        const url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
         console.log(url);
         fetch(url,{
           method: 'DELETE',
@@ -105,7 +104,7 @@ export default class Editar extends Component {
   }
 
  editarCliente(id){
-    let url='http://localhost:4000/api/cliente/'+id;
+    let url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
     console.log(url)
     console.log(this.state)
    
