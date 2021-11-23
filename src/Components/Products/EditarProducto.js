@@ -128,6 +128,7 @@ llamarProducto(id){
   .then( alert('Producto actualizado'))
   .catch(err => console.error(err))
   e.preventDefault()
+  
 
   // console.log(this.state);
 }

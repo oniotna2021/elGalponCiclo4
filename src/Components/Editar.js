@@ -1,5 +1,8 @@
+import axios from 'axios';
 import React, { Component } from 'react';
-import axios from 'axios'
+import reactDom from 'react-dom';
+import { Router } from 'react-router';
+import Administrar from './Administrar'
 
 export default class Editar extends Component {
 
@@ -25,6 +28,7 @@ export default class Editar extends Component {
             this.handleChange = this.handleChange.bind(this);
             this.editarCliente = this.editarCliente.bind(this);
             this.llamarClientes = this.llamarCliente.bind(this);
+            this.componentDidMount = this.componentDidMount.bind(this)
     }
 
     componentDidMount(){
@@ -100,11 +104,12 @@ export default class Editar extends Component {
     }
   }
 
-  editarCliente(id,e){
+ editarCliente(id){
     let url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
     console.log(url)
     console.log(this.state)
-    fetch(url,{
+   
+        fetch(url,{
       method:'PUT',
       body: JSON.stringify(this.state),
       mode:'cors',
@@ -115,27 +120,32 @@ export default class Editar extends Component {
   }).then(res => res.json())
   .then(data => {
       console.log(data);
-      this.setState({
-          nombre:'',
-          apellido: '',
-          email: '',
-          telefono: '',
-          pais: '',
-          ciudad: '',
-          direccion: '',
-          clasificacion: '',
-          password: ''   
-      });
+  }).then(data => {    
+    console.log(data);
+    this.setState({
+      nombre:'',
+      apellido: '',
+      email: '',
+      telefono: '',
+      pais: '',
+      ciudad: '',
+      direccion: '',
+      clasificacion: '',
+      password: '',   
+      clientes:[],
+      clientecarga:[],
+      _id:''             
+      })
+      alert('Cliente actualizado')
   })
-  .then( alert('Usuario actualizado'))
   .catch(err => console.error(err))
-  e.preventDefault();
-  // console.log(this.state);
-  
+  Router.caller.call(this.componentDidCatch)
 }
 
-   
-  
+
+
+
+
     render() {
         return (
             <div>
@@ -248,4 +258,5 @@ export default class Editar extends Component {
             </div>
         )
     }
+    
 }
