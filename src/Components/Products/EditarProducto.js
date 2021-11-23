@@ -33,6 +33,13 @@ export default class EditarProducto extends Component {
       const {name,value} = e.target;      
       this.setState({
           [name]:value,
+          productId: this.state.productocarga.productId,
+          nombre: this.state.productocarga.nombre,    
+          detalle:this.state.productocarga.detalle,
+          categoria:this.state.productocarga.categoria,
+          imagen:this.state.productocarga.imagen,
+          __v:this.state.productocarga.__v,
+
       });
       console.log(e.target.value);
     
@@ -50,7 +57,7 @@ fetchProductos(){
         .then(res => res.json())
         .then(data => {
             this.setState({productos: data});
-            console.log(this.state.clientes);
+            console.log(this.state.productos);
 
         });
         }
@@ -99,10 +106,11 @@ llamarProducto(id){
     }
   }
 
-  editarProducto(id,e){
+  editarProducto(id){
     const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
     console.log(url)
     console.log(this.state)
+    alert('confirma')
     fetch(url,{
       method:'PUT',
       body: JSON.stringify(this.state),
@@ -114,16 +122,10 @@ llamarProducto(id){
   }).then(res => res.json())
   .then(data => {
       console.log(data);
-      this.setState({
-        productId:'',
-        nombre: '',    
+      this.setState({    
         unidades: '',
         precio_compra:'',
-        precio_venta:'',
-        detalle:'',
-        categoria:'',
-        imagen:'',
-        __v:''  
+        precio_venta:''
       });
   })
   .then( alert('Producto actualizado'))
