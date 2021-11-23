@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 
 export default class EditarProducto extends Component {
     constructor() {
@@ -99,7 +98,7 @@ llamarProducto(id){
     }
   }
 
-  editarProducto(id){
+  editarProducto(id,e){
     const url='https://backend-galpon-c4.herokuapp.com/api/producto/'+id;
     console.log(url)
     console.log(this.state)
@@ -128,6 +127,8 @@ llamarProducto(id){
   })
   .then( alert('Producto actualizado'))
   .catch(err => console.error(err))
+  e.preventDefault()
+
   // console.log(this.state);
 }
 

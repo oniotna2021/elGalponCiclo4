@@ -100,7 +100,7 @@ export default class Editar extends Component {
     }
   }
 
-  editarCliente(id,email){
+  editarCliente(id,e){
     let url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
     console.log(url)
     console.log(this.state)
@@ -129,6 +129,7 @@ export default class Editar extends Component {
   })
   .then( alert('Usuario actualizado'))
   .catch(err => console.error(err))
+  e.preventDefault();
   // console.log(this.state);
   
 }
