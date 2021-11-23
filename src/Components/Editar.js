@@ -34,6 +34,16 @@ export default class Editar extends Component {
     componentDidMount(){
         this.fetchClientes();
     }
+    
+    handleChange(e){
+      const {name,value} = e.target;      
+      this.setState({
+          [name]:value,
+      });
+      console.log(e.target.value);
+    
+  }
+
 
     fetchClientes(){
         fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
@@ -135,10 +145,9 @@ export default class Editar extends Component {
       clientecarga:[],
       _id:''             
       })
-      alert('Cliente actualizado')
   })
   .catch(err => console.error(err))
-  Router.caller.call(this.componentDidCatch)
+  .then( alert('Producto actualizado'))
 }
 
 

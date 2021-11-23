@@ -115,20 +115,20 @@ llamarProducto(id){
   .then(data => {
       console.log(data);
       this.setState({
-          nombre:'',
-          apellido: '',
-          email: '',
-          telefono: '',
-          pais: '',
-          ciudad: '',
-          direccion: '',
-          clasificacion: '',
-          password: ''   
+        productId:'',
+        nombre: '',    
+        unidades: '',
+        precio_compra:'',
+        precio_venta:'',
+        detalle:'',
+        categoria:'',
+        imagen:'',
+        __v:''  
       });
   })
   .then( alert('Producto actualizado'))
   .catch(err => console.error(err))
-  e.preventDefault()
+  
   
 
   // console.log(this.state);
