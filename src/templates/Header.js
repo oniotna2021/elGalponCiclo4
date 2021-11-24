@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import logoB from '../assets/logoB.png';
+import '../Components/Style/css/bootstrap.min.css'
 
 export default class Header extends Component {
+
+  onClicDs=()=>{
+    localStorage.removeItem('loggin');    
+  } 
+
     render() {
         return (
             <div>
@@ -17,45 +23,59 @@ export default class Header extends Component {
           <img className="logo-lgi navbar-brand" src={logoB} alt="Logo de El Galpón"></img>
           <Link className="ms-3 navbar-brand" to="/el_galpon_ciclo_4">ElGalpon</Link>
           
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link" to="/el_galpon_ciclo_4">INICIO</Link>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link" to="/el_galpon_ciclo_4">INICIO</Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/About">SOBRE NOSOTROS</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/About">SOBRE NOSOTROS</Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/Contacto">CONTACTO</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Contacto">CONTACTO</Link>
               </li> 
-              <li class="nav-item">
-                <Link class="nav-link" to="/Registrar">REGISTRAR</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Registrar">REGISTRAR</Link>
               </li>  
-              <li class="nav-item">
-                <Link class="nav-link" to="/Administrar">ADMINISTRAR</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/Administrar">ADMINISTRAR</Link>
               </li>   
-              <li class="nav-item">
-                <button class="btn btn-sm btn-outline-secondary" type="submit">
-                  <Link class="nav-link" to="/Comprar">
+              <li className="nav-item">
+                <button className="btn btn-sm btn-outline-secondary" type="submit">
+                  <Link className="nav-link" to="/Comprar">
                   COMPRAR
-                  <i class="bi-cart-fill me-1"></i>
-                  <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                  <i className="bi-cart-fill me-1"></i>
+                  <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
                   </Link>
                 </button> 
-                <button class="btn btn-sm btn-outline-secondary" type="submit">
-                  <Link class="btn" to='/el_galpon_ciclo_4'>
+
+                <button 
+                    className="btn btn-sm btn-outline-secondary" 
+                    type="submit"
+                    onClick={this.onClicDs}>
+                  <Link className="nav-link" to='/el_galpon_ciclo_4' >
                     Salir
                   </Link>
                 </button> 
               </li>
                 
-          {/* <Link class="btn btn-link bg-black" to='/login'>ENTRAR</Link> */}
+          {/* <Link className="btn btn-link bg-black" to='/login'>ENTRAR</Link> */}
           
           </ul>
-          <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
-         </form>
+              {/* <form className="d-flex">
+                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                  <button className="btn btn-outline-success" type="submit">Search</button>
+              </form> */}
+
+              <div className="d-flex">
+                <div className="input-group">
+                  <input type="text" className="form-control me-2" placeholder="Search" aria-label="Search" />
+                  <span className="input-group-btn">
+                    <button className="btn btn-outline-success" type="submit">Search</button>
+                  </span>
+                </div>
+              </div>
+
           </div>
         </div>
         </nav>

@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
-import Login from '../Components/Login/Login';
+import Login from './Login/Login';
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel';
+import LogicaLogin from './Login/LogicaLogin';
+import {useState} from 'react';
 
 
-export default class About extends Component {
-    constructor(props){
-        super(props);
-        this.state ={
-          logged:false,
-          username:"",
-          name:"",
-        };
-        this.updateLogStateLOGIN=this.updateLogState.bind(this);
-    
-      }
-    
+export default function Comprar(){
+
+  const [isLoggedIn, setIsLoggedIn]=useState(false);
       
-    generateAppMenu(){
+  const generateAppMenu = () =>{
     return(
     <div>
         <Carrusel />
@@ -35,35 +28,33 @@ export default class About extends Component {
     );
     }
     
-    generateAppLogin(){
+    const generateAppLogin=()=>{
     return(
-      <Login updateLogStateLOGIN={this.updateLogState.bind(this)} />
+      
+      <LogicaLogin/>
       
     )
     }
+
+    const desicion=()=>{
+      if(localStorage.getItem('loggin')==='true'){
+        //setIsLoggedIn(true);
+        console.log(isLoggedIn);
+        return generateAppMenu();
+      }else{
+        //setIsLoggedIn(false);
+        return generateAppLogin();
+      }
     
-    render(){
-      
-          if(this.state.logged){
-            return this.generateAppMenu();
-          }else{
-            return this.generateAppLogin();
-          }
-        
-      
     }
+
     
-    async updateLogState(LogState,username,name){
-      await this.setState({
-        logged: LogState,
-        username:username,
-        name:name,
-        
-       
-    
-      });
-      console.log(this.state)
-    }
-    
-    
+    return(
+      <div>
+          
+          {desicion()}
+      </div>
+
+    )
+ 
 }

@@ -40,7 +40,7 @@ export default function LogicShop() {
       <PageWrapper>
   
         {productPagina.map(producto =>
-          <Producto nombre={producto.nombre} categoria={producto.categoria}
+          <Producto key={producto._id} identidad={producto._id} nombre={producto.nombre} categoria={producto.categoria}
             precio={producto.precio_venta} 
             img={producto.imagen}>
             {producto.detalle}

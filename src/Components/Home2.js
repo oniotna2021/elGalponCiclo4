@@ -60,7 +60,7 @@ export default class Home extends Component {
                         return(
                             <div className='productElement'>
                             <h1>{producto.nombre}</h1>
-                            <Link to={'/Products/'+ producto.productId}>
+                            <Link to={'/Products/'+ producto.productId}> 
                             <img 
                             src={producto.imagen} 
                             alt={producto.nombre} 

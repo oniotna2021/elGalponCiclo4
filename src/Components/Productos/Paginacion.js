@@ -7,8 +7,8 @@ export default function Paginacion(props) {
     for (let i = 0; i < props.total; i++) {
       let pagina = i + 1;
       resultado.push(
-        <li className={props.pagina === pagina ? 'page-item active' : 'page-item'} aria-current="page">
-          <a onClick={() => props.onChange(pagina)} className="page-link" >{pagina}</a>
+        <li key={1000+pagina} className={props.pagina === pagina ? 'page-item active' : 'page-item'} aria-current="page">
+          <span onClick={() => props.onChange(pagina)} className="page-link" >{pagina}</span>
         </li>
       );
     }

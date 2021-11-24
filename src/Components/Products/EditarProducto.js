@@ -21,7 +21,7 @@ export default class EditarProducto extends Component {
 
             this.eliminarProducto = this.eliminarProducto.bind(this)
             this.fetchProductos = this.fetchProductos.bind(this)
-            this.llamarProducto = this.llamarProducto.bind(this)
+            this.llamarProducto = this.llamarProducto.bind(this) 
             this.handleChange = this.handleChange.bind(this)
            
     }

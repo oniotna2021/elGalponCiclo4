@@ -121,66 +121,66 @@ export default class Editar extends Component {
     render() {
         return (
             <div>
-                <div class="home container">
-   <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATTIVO</h2>
+                <div className="home container">
+   <h2 className="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATTIVO</h2>
    
    
    <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id) }>
                 <div className="container">
                 
-                <div class="mb-3 row">
-                    <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                         <input name="nombre" placeholder={this.state.clientecarga.nombre} onChange={this.handleChange} type="text" class="form-control" id="nombre" required />
+                <div className="mb-3 row">
+                    <label for="nombre" className="col-sm-2 col-form-label">Nombre</label>
+                    <div className="col-sm-10">
+                         <input name="nombre" placeholder={this.state.clientecarga.nombre} onChange={this.handleChange} type="text" className="form-control" id="nombre" required />
                          
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="apellido" class="col-sm-2 col-form-label">Apelido</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.apellido} name="apellido" onChange={this.handleChange} type="text" class="form-control" id="apellido" required />
+                <div className="mb-3 row">
+                    <label for="apellido" className="col-sm-2 col-form-label">Apelido</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.apellido} name="apellido" onChange={this.handleChange} type="text" className="form-control" id="apellido" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="Email" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.email} name="email" onChange={this.handleChange} type="email" class="form-control" id="Email" required />
+                <div className="mb-3 row">
+                    <label for="Email" className="col-sm-2 col-form-label">Email</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.email} name="email" onChange={this.handleChange} type="email" className="form-control" id="Email" required />
                  </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.telefono} name="telefono" onChange={this.handleChange} type="text" class="form-control" id="telefono" required />
+                <div className="mb-3 row">
+                    <label for="telefono" className="col-sm-2 col-form-label">Telefono</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.telefono} name="telefono" onChange={this.handleChange} type="text" className="form-control" id="telefono" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="Pais" class="col-sm-2 col-form-label">Pais</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.pais} name="pais" onChange={this.handleChange} type="text" class="form-control" id="pais" required/>
+                <div className="mb-3 row">
+                    <label for="Pais" className="col-sm-2 col-form-label">Pais</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.pais} name="pais" onChange={this.handleChange} type="text" className="form-control" id="pais" required/>
                </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="ciudad" class="col-sm-2 col-form-label">Ciudad</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.ciudad} name="ciudad" onChange={this.handleChange} type="text" class="form-control" id="ciudad" required />
+                <div className="mb-3 row">
+                    <label for="ciudad" className="col-sm-2 col-form-label">Ciudad</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.ciudad} name="ciudad" onChange={this.handleChange} type="text" className="form-control" id="ciudad" required />
                   </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="direccion" class="col-sm-2 col-form-label">Direccion</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.direccion} name="direccion" onChange={this.handleChange} type="text" class="form-control" id="direccion" required />
+                <div className="mb-3 row">
+                    <label for="direccion" className="col-sm-2 col-form-label">Direccion</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.direccion} name="direccion" onChange={this.handleChange} type="text" className="form-control" id="direccion" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="clasificacion" class="col-sm-2 col-form-label">Clasificacion</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.clasificacion} name="clasificacion" onChange={this.handleChange} type="text" class="form-control" id="clasificacion" required />
+                <div className="mb-3 row">
+                    <label for="clasificacion" className="col-sm-2 col-form-label">Clasificacion</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.clasificacion} name="clasificacion" onChange={this.handleChange} type="text" className="form-control" id="clasificacion" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="password" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                         <input placeholder={this.state.clientecarga.password} name="password" onChange={this.handleChange} type="password" class="form-control" id="password" required />
+                <div className="mb-3 row">
+                    <label for="password" className="col-sm-2 col-form-label">Password</label>
+                    <div className="col-sm-10">
+                         <input placeholder={this.state.clientecarga.password} name="password" onChange={this.handleChange} type="password" className="form-control" id="password" required />
                      </div>
                 </div>
                
@@ -196,8 +196,8 @@ export default class Editar extends Component {
    
    
    
-   <table class="table">
-            <thead class="bg--sucess">
+   <table className="table">
+            <thead className="bg--sucess">
               <tr>
                 <th scope="col">Usuario</th>
                 <th scope="col">Email</th>
@@ -210,15 +210,15 @@ export default class Editar extends Component {
   {
   this.state.clientes.map(cliente => {
         return(
-            <table class="table">
+            <table className="table">
             <tbody>
               <tr key={cliente._id}>
                 <td> {cliente.nombre} </td>
                 <td> {cliente.email} </td>
                 <td> {cliente.telefono} </td>
                 <td>
-                <button class="btn btn-success" onClick={()=> this.llamarCliente(cliente._id) }>Editar</button>
-                  <button class="btn btn-danger" onClick={()=> this.eliminarCliente(cliente._id) }>Eliminar</button>
+                <button className="btn btn-success" onClick={()=> this.llamarCliente(cliente._id) }>Editar</button>
+                  <button className="btn btn-danger" onClick={()=> this.eliminarCliente(cliente._id) }>Eliminar</button>
                 </td>
           
               </tr>

@@ -72,58 +72,58 @@ export default class Registrar extends Component {
                 <form onSubmit={this.agregarCliente}>
                 <div className="container">
                 
-                <div class="mb-3 row">
-                    <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                         <input name="nombre" onChange={this.handleChange} type="text" class="form-control" id="nombre" required />
+                <div className="mb-3 row">
+                    <label for="nombre" className="col-sm-2 col-form-label">Nombre</label>
+                    <div className="col-sm-10">
+                         <input name="nombre" onChange={this.handleChange} type="text" className="form-control" id="nombre" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="apellido" class="col-sm-2 col-form-label">Apelido</label>
-                    <div class="col-sm-10">
-                         <input name="apellido" onChange={this.handleChange} type="text" class="form-control" id="apellido" required />
+                <div className="mb-3 row">
+                    <label for="apellido" className="col-sm-2 col-form-label">Apelido</label>
+                    <div className="col-sm-10">
+                         <input name="apellido" onChange={this.handleChange} type="text" className="form-control" id="apellido" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="Email" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                         <input name="email" onChange={this.handleChange} type="email" class="form-control" id="Email" required />
+                <div className="mb-3 row">
+                    <label for="Email" className="col-sm-2 col-form-label">Email</label>
+                    <div className="col-sm-10">
+                         <input name="email" onChange={this.handleChange} type="email" className="form-control" id="Email" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
-                    <div class="col-sm-10">
-                         <input name="telefono" onChange={this.handleChange} type="text" class="form-control" id="telefono" required />
+                <div className="mb-3 row">
+                    <label for="telefono" className="col-sm-2 col-form-label">Telefono</label>
+                    <div className="col-sm-10">
+                         <input name="telefono" onChange={this.handleChange} type="text" className="form-control" id="telefono" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="Pais" class="col-sm-2 col-form-label">Pais</label>
-                    <div class="col-sm-10">
-                         <input name="pais" onChange={this.handleChange} type="text" class="form-control" id="pais" required/>
+                <div className="mb-3 row">
+                    <label for="Pais" className="col-sm-2 col-form-label">Pais</label>
+                    <div className="col-sm-10">
+                         <input name="pais" onChange={this.handleChange} type="text" className="form-control" id="pais" required/>
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="ciudad" class="col-sm-2 col-form-label">Ciudad</label>
-                    <div class="col-sm-10">
-                         <input name="ciudad" onChange={this.handleChange} type="text" class="form-control" id="ciudad" required />
+                <div className="mb-3 row">
+                    <label for="ciudad" className="col-sm-2 col-form-label">Ciudad</label>
+                    <div className="col-sm-10">
+                         <input name="ciudad" onChange={this.handleChange} type="text" className="form-control" id="ciudad" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="direccion" class="col-sm-2 col-form-label">Direccion</label>
-                    <div class="col-sm-10">
-                         <input name="direccion" onChange={this.handleChange} type="text" class="form-control" id="direccion" required />
+                <div className="mb-3 row">
+                    <label for="direccion" className="col-sm-2 col-form-label">Direccion</label>
+                    <div className="col-sm-10">
+                         <input name="direccion" onChange={this.handleChange} type="text" className="form-control" id="direccion" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="clasificacion" class="col-sm-2 col-form-label">Clasificacion</label>
-                    <div class="col-sm-10">
-                         <input name="clasificacion" onChange={this.handleChange} type="text" class="form-control" id="clasificacion" required />
+                <div className="mb-3 row">
+                    <label for="clasificacion" className="col-sm-2 col-form-label">Clasificacion</label>
+                    <div className="col-sm-10">
+                         <input name="clasificacion" onChange={this.handleChange} type="text" className="form-control" id="clasificacion" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="password" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                         <input name="password" onChange={this.handleChange} type="password" class="form-control" id="password" required />
+                <div className="mb-3 row">
+                    <label for="password" className="col-sm-2 col-form-label">Password</label>
+                    <div className="col-sm-10">
+                         <input name="password" onChange={this.handleChange} type="password" className="form-control" id="password" required />
                     </div>
                 </div>
                

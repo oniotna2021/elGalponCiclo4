@@ -30,12 +30,12 @@ function App() {
       <Routes>
          <Route path='/el_galpon_ciclo_4' element={<Home />}></Route>
          <Route path='/login' element={<Login />}></Route>
-       <Route path='/Products' element={<ProductWrap />}>
-            <Route path='/Products' element={<Products />}></Route>
-            <Route path='/Products/:productId' element={<SpecificProduct />}></Route>
-            <Route path='/Products/create' caseSensitive={false} element={<CrearProducto />}></Route>
-            <Route path='/Products/edit' caseSensitive={false} element={<EditarProducto />}></Route>
-         </Route>
+          <Route path='/Products' element={<ProductWrap />}>
+              <Route path='/Products' element={<Products />}></Route>
+              <Route path='/Products/:id' element={<SpecificProduct />}></Route>
+              <Route path='/Products/create' caseSensitive={false} element={<CrearProducto />}></Route>
+              <Route path='/Products/edit' caseSensitive={false} element={<EditarProducto />}></Route>
+          </Route>
          <Route path='/About' element={<About />}></Route>
          <Route path='*' element={<NotFound />}></Route>
          <Route path='/Contacto' element={<Contacto />}></Route>
