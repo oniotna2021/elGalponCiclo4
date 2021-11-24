@@ -16,7 +16,7 @@ export default function LogicShop() {
     }, []); 
   
       const buscarProductos=()=>{
-      let url='https://backend-galpon-c4.herokuapp.com/api/producto';
+      let url='http://localhost:4000/api/producto';
       axios.get(url)
       .then(res => {
         setProductos(res.data)
