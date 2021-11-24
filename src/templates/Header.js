@@ -1,12 +1,14 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import logoB from '../assets/logoB.png';
-import '../Components/Style/css/bootstrap.min.css'
+import '../Components/Style/css/bootstrap.min.css';
+
+
 
 export default class Header extends Component {
 
   onClicDs=()=>{
-    localStorage.removeItem('loggin');    
+    localStorage.removeItem('token');    
   } 
 
     render() {
@@ -47,14 +49,14 @@ export default class Header extends Component {
                   <i className="bi-cart-fill me-1"></i>
                   <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
                   </Link>
-                </button> 
+                </button>
 
                 <button 
                     className="btn btn-sm btn-outline-secondary" 
                     type="submit"
                     onClick={this.onClicDs}>
                   <Link className="nav-link" to='/el_galpon_ciclo_4' >
-                    Salir
+                    SALIR
                   </Link>
                 </button> 
               </li>

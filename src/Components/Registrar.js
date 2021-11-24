@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel'
-import CryptoJS from "crypto"
-
-
-
 export default class Registrar extends Component {
 
     constructor() {
@@ -25,8 +21,10 @@ export default class Registrar extends Component {
     }
 
     async agregarCliente(e){
-
-            fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
+        console.log(this.state)
+        alert('el state')
+//https://backend-galpon-c4.herokuapp.com/api/cliente/
+            fetch('http://localhost:4000/api/cliente',{
             method:'POST',
             body: JSON.stringify(this.state),
             mode:'cors',
@@ -60,7 +58,7 @@ export default class Registrar extends Component {
         this.setState({
             [name]:value
         });
-        // console.log(e.target.value);
+        console.log(e.target.value);
     }
 
     render() {
@@ -95,31 +93,31 @@ export default class Registrar extends Component {
                 <div className="mb-3 row">
                     <label for="telefono" className="col-sm-2 col-form-label">Telefono</label>
                     <div className="col-sm-10">
-                         <input name="telefono" onChange={this.handleChange} type="text" className="form-control" id="telefono" required />
+                         <input name="telefono" onChange={this.handleChange} type="text" className="form-control" id="telefono" />
                     </div>
                 </div>
                 <div className="mb-3 row">
                     <label for="Pais" className="col-sm-2 col-form-label">Pais</label>
                     <div className="col-sm-10">
-                         <input name="pais" onChange={this.handleChange} type="text" className="form-control" id="pais" required/>
+                         <input name="pais" onChange={this.handleChange} type="text" className="form-control" id="pais" />
                     </div>
                 </div>
                 <div className="mb-3 row">
                     <label for="ciudad" className="col-sm-2 col-form-label">Ciudad</label>
                     <div className="col-sm-10">
-                         <input name="ciudad" onChange={this.handleChange} type="text" className="form-control" id="ciudad" required />
+                         <input name="ciudad" onChange={this.handleChange} type="text" className="form-control" id="ciudad" />
                     </div>
                 </div>
                 <div className="mb-3 row">
                     <label for="direccion" className="col-sm-2 col-form-label">Direccion</label>
                     <div className="col-sm-10">
-                         <input name="direccion" onChange={this.handleChange} type="text" className="form-control" id="direccion" required />
+                         <input name="direccion" onChange={this.handleChange} type="text" className="form-control" id="direccion" />
                     </div>
                 </div>
                 <div className="mb-3 row">
                     <label for="clasificacion" className="col-sm-2 col-form-label">Clasificacion</label>
                     <div className="col-sm-10">
-                         <input name="clasificacion" onChange={this.handleChange} type="text" className="form-control" id="clasificacion" required />
+                         <input name="clasificacion" onChange={this.handleChange} type="text" className="form-control" id="clasificacion" />
                     </div>
                 </div>
                 <div className="mb-3 row">

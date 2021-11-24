@@ -4,6 +4,9 @@ export default class Footer extends Component {
     render() {
         return (
             <div>
+                <br />
+                <br />
+
                 <footer className="py-5 bg-dark">
                     <div className="container">
                         <p className="m-0 text-center text-white">Copyright &copy; El Galpon 2021</p>

@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import Login from './Login/Login';
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel';
-import LogicaLogin from './Login/LogicaLogin';
 import {useState} from 'react';
+import Login from './Login/Login';
 
 
 export default function Comprar(){
 
-  const [isLoggedIn, setIsLoggedIn]=useState(false);
+  const [isLoggedIn]=useState(false);
       
   const generateAppMenu = () =>{
     return(
@@ -31,13 +29,15 @@ export default function Comprar(){
     const generateAppLogin=()=>{
     return(
       
-      <LogicaLogin/>
+    <div>
+      <Login />
+    </div>
       
     )
     }
 
     const desicion=()=>{
-      if(localStorage.getItem('loggin')==='true'){
+      if(localStorage.getItem('token')){
         //setIsLoggedIn(true);
         console.log(isLoggedIn);
         return generateAppMenu();

@@ -20,7 +20,7 @@ export default class CrearProducto extends Component {
     }
 
     agregarProducto(e){
-        fetch('https://backend-galpon-c4.herokuapp.com/api/producto',{
+        fetch('http://localhost:4000/api/producto',{
             method:'POST',
             body: JSON.stringify(this.state),
             headers:{

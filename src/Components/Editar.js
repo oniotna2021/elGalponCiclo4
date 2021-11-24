@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import reactDom from 'react-dom';
-import { Router } from 'react-router';
-import Administrar from './Administrar'
+
 
 export default class Editar extends Component {
 
@@ -53,7 +51,7 @@ export default class Editar extends Component {
 
 
     fetchClientes(){
-        fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
+        fetch('http://localhost:4000/api/cliente',{
           METHOD: 'GET',
           headers: {
             'Accept': 'aplication/json',
@@ -74,7 +72,7 @@ export default class Editar extends Component {
 
 
     llamarCliente(id){
-      const url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
+      const url='http://localhost:4000/api/cliente/'+id;
       fetch(url,{
         METHOD: 'GET',
         headers: {
@@ -94,7 +92,7 @@ export default class Editar extends Component {
       if (confirm('Desea borrar este usuario ?')){
 
         console.log('Eliminando',id);
-        const url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
+        const url='http://localhost:4000/api/cliente/'+id;
         console.log(url);
         fetch(url,{
           method: 'DELETE',
@@ -114,7 +112,7 @@ export default class Editar extends Component {
   }
 
  editarCliente(id){
-    let url='https://backend-galpon-c4.herokuapp.com/api/cliente/'+id;
+    let url='http://localhost:4000/api/cliente/'+id;
     console.log(url)
     console.log(this.state)
    
@@ -147,7 +145,7 @@ export default class Editar extends Component {
       })
   })
   .catch(err => console.error(err))
-  .then( alert('Producto actualizado'))
+  .then( alert('Usuario actualizado'))
 }
 
 

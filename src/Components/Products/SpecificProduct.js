@@ -93,7 +93,7 @@ export default function SpecificProduct(){
 
                                       <div class="product-details-footer">
                                           <div class="product-cat">
-                                              <span>Category:</span>
+                                              <span>Categoria:</span>
                                               {producto.categoria}
                                           </div>
                                       </div>

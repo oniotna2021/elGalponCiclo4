@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function LogicaLogin() {
 
+  
+
   const [usuarios, setUsuarios]= useState([]);
   const [tablaUsuarios, setTablaUsuarios]= useState([]);
   const [pass, setPass]= useState("");

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Carrusel from '../../templates/Carrusel'
-import Footer from '../../templates/Footer'
 
 
 export default class logicLogin extends Component {
@@ -53,7 +51,6 @@ export default class logicLogin extends Component {
     render() {
         return (
             <div>
-                <Carrusel />
                 <div class="home container">
    <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">INICIO DE SESION</h2>
    <h3 class="text-center fw-bold super-container mt-3">Introduce tu correo y contraseña</h3>
@@ -76,14 +73,15 @@ export default class logicLogin extends Component {
                      </div>
                 </div>
                
-                <button type="submit" className="btn btn-dark">ENTRAR</button>
+                <button type="submit" className="btn btn-dark">ACTUALIZAR</button>
                
           
                 </div>
                 </form>
-                </div>
-
-                <Footer />
+   
+   
+ 
+  </div>
             </div>
         )
     }
