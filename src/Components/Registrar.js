@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel'
+import CryptoJS from "crypto"
 
 
 
@@ -23,8 +24,9 @@ export default class Registrar extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    agregarCliente(e){
-        fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
+    async agregarCliente(e){
+
+            fetch('https://backend-galpon-c4.herokuapp.com/api/cliente',{
             method:'POST',
             body: JSON.stringify(this.state),
             mode:'cors',
@@ -53,7 +55,7 @@ export default class Registrar extends Component {
         e.preventDefault();
     }
 
-    handleChange(e){
+    handleChange(e,text){
         const {name,value} = e.target;
         this.setState({
             [name]:value
