@@ -157,74 +157,14 @@ export default class Editar extends Component {
     render() {
         return (
             <div>
-<<<<<<< HEAD
-                <div className="home container">
-   <h2 className="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATTIVO</h2>
-=======
                 <div class="home container">
    <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">PANEL ADMINISTRATTIVO</h2>
    <h3 class="text-center fw-bold super-container mt-3">Actualizar nombre, apellido, telefono</h3>
->>>>>>> eecf1dca2dbc0e8da521c69995d95aa28f8ba7c5
    
    
    <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id) }>
                 <div className="container">
                 
-<<<<<<< HEAD
-                <div className="mb-3 row">
-                    <label for="nombre" className="col-sm-2 col-form-label">Nombre</label>
-                    <div className="col-sm-10">
-                         <input name="nombre" placeholder={this.state.clientecarga.nombre} onChange={this.handleChange} type="text" className="form-control" id="nombre" required />
-                         
-                    </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="apellido" className="col-sm-2 col-form-label">Apelido</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.apellido} name="apellido" onChange={this.handleChange} type="text" className="form-control" id="apellido" required />
-                    </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="Email" className="col-sm-2 col-form-label">Email</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.email} name="email" onChange={this.handleChange} type="email" className="form-control" id="Email" required />
-                 </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="telefono" className="col-sm-2 col-form-label">Telefono</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.telefono} name="telefono" onChange={this.handleChange} type="text" className="form-control" id="telefono" required />
-                    </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="Pais" className="col-sm-2 col-form-label">Pais</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.pais} name="pais" onChange={this.handleChange} type="text" className="form-control" id="pais" required/>
-               </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="ciudad" className="col-sm-2 col-form-label">Ciudad</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.ciudad} name="ciudad" onChange={this.handleChange} type="text" className="form-control" id="ciudad" required />
-                  </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="direccion" className="col-sm-2 col-form-label">Direccion</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.direccion} name="direccion" onChange={this.handleChange} type="text" className="form-control" id="direccion" required />
-                    </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="clasificacion" className="col-sm-2 col-form-label">Clasificacion</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.clasificacion} name="clasificacion" onChange={this.handleChange} type="text" className="form-control" id="clasificacion" required />
-                    </div>
-                </div>
-                <div className="mb-3 row">
-                    <label for="password" className="col-sm-2 col-form-label">Password</label>
-                    <div className="col-sm-10">
-                         <input placeholder={this.state.clientecarga.password} name="password" onChange={this.handleChange} type="password" className="form-control" id="password" required />
-=======
                 <div class="mb-3 row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
                     <div class="col-sm-10">
@@ -278,7 +218,6 @@ export default class Editar extends Component {
                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
                          <input value={this.state.clientecarga.password} name="password" onChange={this.handleChange} type="password" class="form-control" id="password" />
->>>>>>> eecf1dca2dbc0e8da521c69995d95aa28f8ba7c5
                      </div>
                 </div> */}
                
@@ -288,19 +227,8 @@ export default class Editar extends Component {
                 </div>
                 </form>
    
-<<<<<<< HEAD
-   
-   
-   
-   
-   
-   
-   <table className="table">
-            <thead className="bg--sucess">
-=======
    <table class="table">
             <thead class="bg--sucess">
->>>>>>> eecf1dca2dbc0e8da521c69995d95aa28f8ba7c5
               <tr>
                 <th scope="col">Usuario</th>
                 <th scope="col">Email</th>
