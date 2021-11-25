@@ -21,7 +21,7 @@ export default class administrar extends Component {
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5IPJXeZLdosZk49nTz076duNkeobwAFoT3A&usqp=CAU" class="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">EDITAR PRODUCTO</h5>
-                  <p className="card-text">En esta seccion podras editar el nombre, apellido y telefono del cliente</p>
+                  <p className="card-text">En esta seccion podras editar el inventario y precio de compra-venta del producto</p>
                  <Link className="btn btn-primary" to="/Products/edit">EDITAR</Link> 
                </div>
             </div>
@@ -30,7 +30,7 @@ export default class administrar extends Component {
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9C2yhxuis7OPC_X1ZYjHI6jAruBt1VzQ-KUeo4Ls2Rd9w10I6_jCgO7vwvCHCwixTsJ4&usqp=CAU" class="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">AGREGAR PRODUCTO</h5>
-                  <p className="card-text">En esta seccion podras editar el nombre, apellido y telefono del cliente</p>
+                  <p className="card-text">En esta seccion podras agregar un producto nuevo</p>
                  <Link className="btn btn-primary" to="/products/create">AGREGAR</Link> 
                </div>
             </div>
