@@ -11,20 +11,20 @@ export default function Producto(props) {
       <div className="product product-7 text-center">
           <figure className="product-media">
             <Link to={'/Products/'+ props.identidad}>
-                <a>
+                <div> 
                     <img src={props.img} alt="Product" className="product-image" />
                     
-                </a>
+                </div>
                 
                 <div className="product-action-vertical">
                     
-                    <a className="btn-product-icon btn-wishlist btn-expandable"><span>Añadir a Deseos</span></a>
-                    <a className="btn-product-icon btn-quickview" title="Vista Rapida">
+                    <div className="btn-product-icon btn-wishlist btn-expandable"><span>Añadir a Deseos</span></div>
+                    <div className="btn-product-icon btn-quickview" title="Vista Rapida">
                     
                         <span>
                             Vista Rapida
                         </span>
-                    </a>
+                    </div>
         
                 </div>
                 

@@ -9,6 +9,7 @@ export default class Header extends Component {
 
   onClicDs=()=>{
     localStorage.removeItem('token');    
+    window.location.reload();
   } 
 
     render() {

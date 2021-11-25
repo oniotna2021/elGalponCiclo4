@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { Component } from 'react';
 
 
@@ -49,8 +48,9 @@ export default class Editar extends Component {
     
   }
 
-
+    
     fetchClientes(){
+
         fetch('http://localhost:4000/api/cliente',{
           METHOD: 'GET',
           headers: {

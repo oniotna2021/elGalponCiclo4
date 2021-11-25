@@ -22,8 +22,6 @@ export default class Registrar extends Component {
 
     async agregarCliente(e){
         console.log(this.state)
-        alert('el state')
-//https://backend-galpon-c4.herokuapp.com/api/cliente/
             fetch('http://localhost:4000/api/cliente',{
             method:'POST',
             body: JSON.stringify(this.state),

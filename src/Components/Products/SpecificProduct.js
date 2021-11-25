@@ -13,7 +13,7 @@ export default function SpecificProduct(){
   const [producto, setProducto]= useState([]);
 
   const peticionProductGet=async()=>{
-    await axios.get('https://backend-galpon-c4.herokuapp.com/api/producto/'+id)
+    await axios.get('http://localhost:4000/api/producto/'+id)
     .then(response=>{
       setProducto(response.data);
     }).catch(error=>{

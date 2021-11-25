@@ -1,13 +1,10 @@
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel';
-import {useState} from 'react';
 import Login from './Login/Login';
 
 
 export default function Comprar(){
-
-  const [isLoggedIn]=useState(false);
-      
+   
   const generateAppMenu = () =>{
     return(
     <div>
@@ -37,13 +34,12 @@ export default function Comprar(){
     }
 
     const desicion=()=>{
-      if(localStorage.getItem('token')){
-        //setIsLoggedIn(true);
-        console.log(isLoggedIn);
-        return generateAppMenu();
-      }else{
-        //setIsLoggedIn(false);
+      let token = localStorage.getItem('token')
+      if(!token){
         return generateAppLogin();
+      }else{
+        return generateAppMenu();
+        
       }
     
     }
@@ -51,10 +47,8 @@ export default function Comprar(){
     
     return(
       <div>
-          
           {desicion()}
       </div>
-
     )
- 
+
 }

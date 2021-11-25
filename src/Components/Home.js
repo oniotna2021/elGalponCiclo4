@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Footer from "../templates/Footer";
 import Carrusel from '../templates/Carrusel';
-// import {db} from "../db";
+
 import './Style/css/bootstrap.min.css';
-//import '../App.css'
+
 
 import LogicShop from './Productos/LogicShop';
 //import { Link } from 'react-router-dom';

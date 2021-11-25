@@ -3,21 +3,21 @@ import './App.css';
 
 import { Routes, Route} from 'react-router-dom';
 
-import Comprar from "./Components/Comprar";
-import Contacto from "./Components/Contacto";
-import Home from "./Components/Home";
+import Comprar from "../Comprar";
+import Contacto from "../Contacto";
+import Home from "../Home";
 import logicLogin from "./Components/Login/logicLogin";
-import About from "./Components/About";
-import NotFound from "./Components/NotFound";
-import Products from "./Components/Products/Products";
-import ProductWrap from "./Components/Products/ProductWrap";
-import CrearProducto from "./Components/Products/CrearProducto";
-import SpecificProduct from "./Components/Products/SpecificProduct";
-import Registrar from './Components/Registrar';
-import Administrar from './Components/Administrar';
-import Header from './templates/Header';
-import EditarProducto from './Components/Products/EditarProducto'
-import Editar from './Components/Editar';
+import About from "../About";
+import NotFound from "../NotFound";
+import Products from "../Products/Products";
+import ProductWrap from "../Products/ProductWrap";
+import CrearProducto from "../Products/CrearProducto";
+import SpecificProduct from "../Products/SpecificProduct";
+import Registrar from '../Registrar';
+import Administrar from '../Administrar';
+import Header from '../../templates/Header';
+import EditarProducto from '../Products/EditarProducto'
+import Editar from '../Editar';
 
 
 
