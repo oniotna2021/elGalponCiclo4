@@ -50,6 +50,7 @@ export default class logicLogin extends Component {
           localStorage.setItem('apellido', data.apellido)
           localStorage.setItem('direccion', data.direccion)
           localStorage.setItem('email', data.email)
+          localStorage.setItem('_id', data._id)
         })
 
 
