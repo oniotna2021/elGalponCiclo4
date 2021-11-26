@@ -46,8 +46,12 @@ export default class logicLogin extends Component {
       .then(res =>res.json())
         .then(data =>{
           localStorage.setItem('token', data.token)
-          console.log(data.token);
+          localStorage.setItem('nombre', data.nombre)
+          localStorage.setItem('apellido', data.apellido)
+          localStorage.setItem('direccion', data.direccion)
+          localStorage.setItem('email', data.email)
         })
+
 
     }
     render() {
