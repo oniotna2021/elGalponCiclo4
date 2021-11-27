@@ -78,9 +78,8 @@ export default function Comprar(){
       {
         
   carritos.map(carrito => {
-      
-     
-        return(
+        if(carrito.email === localStorage.getItem('email')){
+          return(
             
             <table class="table">
             <tbody>
@@ -97,6 +96,8 @@ export default function Comprar(){
               </tbody>
           </table>
         )
+        }
+      
       
   })
   
