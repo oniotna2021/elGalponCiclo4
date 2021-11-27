@@ -25,7 +25,7 @@ export default function Comprar(){
   });   
 }
 
-let carritoPagina= carritos.slice();
+// let carritoPagina= carritos.slice();
 
 
 
@@ -76,16 +76,18 @@ let carritoPagina= carritos.slice();
       </table>
 
       {
-  carritoPagina.map(carrito => {
-        alert(carrito.precio_venta)
-        return(
+        
+  carritos.map(carrito => {
+        if(carrito.email === localStorage.getItem('email')){
+          return(
+            
             <table class="table">
             <tbody>
               <tr key={carrito._id}>
-                {alert(carrito.unidades)}
                 <td className="col-md-4">{carrito.nombre} </td>
-                <td className="col-md-1">{carrito.unidades} </td>
+                <td className="col-md-3">{carrito.cantidad} </td>
                 <td className="col-md-3">{carrito.precio_venta}</td>
+                <td className="col-md-3">{carrito.precio_venta * carrito.cantidad}</td>
                 
                 <td className="col-md-1">
                 </td>
@@ -94,6 +96,9 @@ let carritoPagina= carritos.slice();
               </tbody>
           </table>
         )
+        }
+      
+      
   })
   
   }

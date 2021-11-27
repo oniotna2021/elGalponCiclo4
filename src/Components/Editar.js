@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-
 export default class Editar extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state={
             nombre:'',
             apellido: '',
@@ -17,7 +16,7 @@ export default class Editar extends Component {
             password: '',   
             clientes:[],
             clientecarga:[],
-            _id:''             
+            _id:'',        
             };
             
             this.eliminarCliente = this.eliminarCliente.bind(this)
@@ -26,11 +25,15 @@ export default class Editar extends Component {
             this.editarCliente = this.editarCliente.bind(this);
             this.llamarClientes = this.llamarCliente.bind(this);
             this.componentDidMount = this.componentDidMount.bind(this)
+            this.render = this.render.bind(this)
+           
     }
 
     componentDidMount(){
         this.fetchClientes();
+        this.render();
     }
+
 
     handleChange(e){
       const {name,value} = e.target;      
@@ -60,9 +63,19 @@ export default class Editar extends Component {
         })
         .then(res => res.json())
         .then(data => {
-           
             this.setState({clientes: data});
             console.log(this.state.clientes);
+            this.setState({
+              nombre:'',
+              apellido: '',
+              email: '',
+              telefono: '',
+              pais: '',
+              ciudad: '',
+              direccion: '',
+              clasificacion: '',
+              password: ''   
+          });
 
         });
         
@@ -116,7 +129,7 @@ export default class Editar extends Component {
     console.log(url)
     console.log(this.state)
    
-        fetch(url,{
+      fetch(url,{
       method:'PUT',
       body: JSON.stringify(this.state),
       mode:'cors',
@@ -127,30 +140,23 @@ export default class Editar extends Component {
   }).then(res => res.json())
   .then(data => {
       console.log(data);
-  }).then(data => {    
-    console.log(data);
-    this.setState({
-      nombre:'',
-      apellido: '',
-      email: '',
-      telefono: '',
-      pais: '',
-      ciudad: '',
-      direccion: '',
-      clasificacion: '',
-      password: '',   
-      clientes:[],
-      clientecarga:[],
-      _id:''             
-      })
+      this.setState({
+        nombre:'',
+        apellido: '',
+        email: '',
+        telefono: '',
+        pais: '',
+        ciudad: '',
+        direccion: '',
+        clasificacion: '',
+        password: ''            
+        })
+        alert('Usuario actualizado') 
+       
   })
   .catch(err => console.error(err))
-  .then( alert('Usuario actualizado'))
+
 }
-
-
-
-
 
     render() {
         return (
@@ -160,7 +166,7 @@ export default class Editar extends Component {
    <h3 class="text-center fw-bold super-container mt-3">Actualizar nombre, apellido, telefono</h3>
    
    
-   <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id) }>
+   <form onSubmit={()=> this.editarCliente(this.state.clientecarga._id)}>
                 <div className="container">
                 
                 <div class="mb-3 row">

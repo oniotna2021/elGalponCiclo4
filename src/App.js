@@ -43,6 +43,7 @@ function App() {
          <Route path='/Registrar' element={<Registrar />}></Route>
          <Route path='/Administrar' element={<Administrar />}></Route>
          <Route path='/Editar' element={<Editar />}></Route>
+         <Route path='/Editar?nombre=nombre&apellido=apellido&telefono=telefono' element={<Editar />}></Route>
 
 
        </Routes>
