@@ -11,9 +11,58 @@ export default function SpecificProduct(){
   let {id} = useParams();
 
   const [producto, setProducto]= useState([]);
+  const [carrito, setCarrito]= useState([]);
 
-  const peticionProductGet=async()=>{
-    await axios.get('http://localhost:4000/api/producto/'+id)
+  useEffect(()=>{
+    peticionProductGet();
+  })
+
+  const preparCarrito=()=>{
+    setCarrito(
+        {
+          email: localStorage.getItem('email'),
+          id_dbproducto: id,
+          nombre: producto.nombre,
+          cantidad: 1,
+          productId: producto.productId,
+          precio_venta: producto.precio_venta,
+          __v: 0
+      })
+  }
+
+  const agregarAlCarrito=(e)=>{
+
+    fetch('http://localhost:4000/api/carrito',{
+        method:'POST',
+        body: JSON.stringify(carrito),
+        headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json'
+        }
+    }).then(res => res.json())
+    .then(data => {
+        console.log(data);
+        this.setState({
+            productId:'',
+            nombre: '',    
+            unidades: '',
+            precio_compra:'',
+            precio_venta:'',
+            detalle:'',
+            categoria:'',
+            imagen:'',
+            __v:''
+            });
+    })
+    .then( alert('Producto registrado'))
+    .catch(err => console.error(err))
+    // console.log(this.state);
+    e.preventDefault();
+}
+  
+
+  const peticionProductGet=()=>{
+    axios.get('http://localhost:4000/api/producto/'+id)
     .then(response=>{
       setProducto(response.data);
     }).catch(error=>{
@@ -21,9 +70,8 @@ export default function SpecificProduct(){
     })
   }
 
-  useEffect(()=>{
-    peticionProductGet();
-  })
+
+
 
   return (
       <div>
@@ -82,8 +130,8 @@ export default function SpecificProduct(){
                                           </div>
                                       </div>
 
-                                      <div class="product-details-action">
-                                          <a href="#" class="btn-product btn-cart"><span>adicionar al carro</span></a>
+                                      <div class="product-details-action">                        
+                                          <button onClick={()=> agregarAlCarrito() } className="btn-product btn-cart"><span>añadir al carro</span></button>
 
                                           <div class="details-action-wrapper">
                                               <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>deseos</span></a>
@@ -132,7 +180,7 @@ export default function SpecificProduct(){
                       </div>
 
                       <div class="product-details-action">
-                          <a href="#" class="btn-product btn-cart"><span>adicionar al carro</span></a>
+                          <button onClick={()=> this.eliminarCliente() } class="btn-product btn-cart"><span>Añadir al carro</span></button>
                           <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>deseos</span></a>
                       </div>
                   </div>

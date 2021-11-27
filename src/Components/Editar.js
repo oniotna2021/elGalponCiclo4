@@ -151,7 +151,8 @@ export default class Editar extends Component {
         clasificacion: '',
         password: ''            
         })
-        alert('Usuario actualizado') 
+        alert('Usuario actualizado')
+        id.preventDefault() 
        
   })
   .catch(err => console.error(err))
