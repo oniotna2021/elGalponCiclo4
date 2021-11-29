@@ -70,8 +70,12 @@ export default function SpecificProduct(){
     })
   }
 
-
-
+  const agregarAFavoritos=()=>{
+      console.log("El email es " + localStorage.getItem("email"));
+      console.log("El Id del producto en la tienda es " + producto.productId);
+      console.log("El Id del producto en la base de datos es " + id);
+      alert("Funcionalidad en desarrollo")
+  }
 
   return (
       <div>
@@ -134,7 +138,8 @@ export default function SpecificProduct(){
                                           <button onClick={()=> agregarAlCarrito() } className="btn-product btn-cart"><span>añadir al carro</span></button>
 
                                           <div class="details-action-wrapper">
-                                              <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>deseos</span></a>
+                                              <button class="btn-product btn-wishlist" onClick={()=>agregarAFavoritos()}>AÑADIR A MIS FAVORITOS</button>
+                                              <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>VER MIS FAVORITOS</span></a>
                                         
                                           </div>
                                       </div>
