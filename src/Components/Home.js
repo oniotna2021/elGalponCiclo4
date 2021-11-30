@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import Footer from "../templates/Footer";
 import Carrusel from '../templates/Carrusel';
-// import {db} from "../db";
-import '../App.css'
+
+import './Style/css/bootstrap.min.css';
+
+
 import LogicShop from './Productos/LogicShop';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
     
@@ -18,7 +20,7 @@ export default class Home extends Component {
 
                      
                 <div >
-                            <LogicShop /> 
+                            <LogicShop />  
                 </div>
             
 

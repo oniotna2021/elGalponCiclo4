@@ -1,155 +1,149 @@
-import React, { Component } from "react";
-import "../../App.css";
-import { credentials } from "../../db";
-import Carrusel from "../../templates/Carrusel";
-import Footer from "../../templates/Footer";
-import { urlHome } from "../../Backend";
-import { Axios } from "axios";
-
-const axios = new Axios();
-
-const baseurl="";
+import React, { Component } from 'react';
+import Carrusel from '../../templates/Carrusel'
+import Footer from '../../templates/Footer'
 
 
-export default class Login extends Component {
+export default class logicLogin extends Component {
 
-  state={
-      form:{
-          username:'',
-          password:''
-      }
+    constructor() {
+        super();
+        this.state={
+            email: '',
+            password: '', 
+            selector:false             
+            };
+          
+            this.renderLogin = this.renderLogin.bind(this)
+            this.handleChange = this.handleChange.bind(this);
+            this.renderRecoverPasword = this.renderRecoverPasword.bind(this)
+            this.loginCliente = this.loginCliente.bind(this);
+            // this.componentDidMount = this.componentDidMount.bind(this)
+    }
+
+    // componentDidMount(){
+    //     this.loginCliente();
+    // }
+
+    handleChange(e){
+      const {name,value} = e.target;      
+      this.setState({
+          [name]:value
+      });
+      console.log(e.target.value);
+    
   }
 
-    handleChange= async e=>{
-        await this.setState({
-            form:{
-                ...this.state.form,
-                [e.target.name]:e.target.value
-            }
-        });
-        console.log(this.state.form)
-    }
-
-    iniciarSesion=async ()=>{
-        
-         await axios.get(baseurl, {params: {
-            username:this.state.form.username,
-            password:this.state.form.password
-        }}).then(response=>{
-            console.log(response)
-        }).catch(error=>{
-            console.log(error);
-        })
-    }
-
-    async handleRecoverClick(e){
-        // alert('Se ha enviado un correo de recuperacion')
-        if(e.target.name==='password'){
-            this.setState({recoverPassword:false})
-        }else{
-            //verificar si el correo esta registrado
-            //logica de correo
-            // se manda peticion backend y envia correo
-            alert('Su correo fue enviado')
-            this.setState({recoverPassword : false, email:''})
+    loginCliente(){
+      const url='http://localhost:4000/api/login/';
+      fetch(url,{
+        method:'POST',
+        body: JSON.stringify(this.state),
+        headers: {
+          'Accept': 'aplication/json',
+          'Content-Type': 'application/json'
         }
+      })
+      .then(res =>res.json())
+        .then(data =>{
+          localStorage.setItem('token', data.token)
+          localStorage.setItem('nombre', data.nombre)
+          localStorage.setItem('apellido', data.apellido)
+          localStorage.setItem('direccion', data.direccion)
+          localStorage.setItem('email', data.email)
+        })
+
+
     }
-
-    async recoverContraseña(){
-        alert('Introduce tu email para recuperar la contraseña');
-        this.setState({recoverPassword:true});
-    }
-
-    async handleClick(){
-        // let axios = new Axios();
-        // let thisReference = this;
-        // let isValidCredentials = false;
-        // let name='';
-        //Aqui se colocan las validaciones para inicio de sesion
-
-        // if(this.form.username.length < 3 ||  this.form.password.length < 3 ){
-        //     alert('Ususario y contraseña minimo 3 caracteres')
-        //     return;
-        // }
-
-        // let response = await axios.get(urlHome+'credentials',{
-        //     data:{
-        //         user: {},
-        //         data:{
-        //             username: this.state.username,
-        //             password: this.state.password,
-        //         },
-        //     },
-                
-        //     });
-        // console.log(response)
-      
-
-
-       
-    }
-
-    cancel(){
-        return(
-            this.setState({recoverPassword:false,email:''})
-        
-        )
-    }
-
-    renderRecoverLogin(){
-        return(
-            <div>
-                <Carrusel />
-            <div className="App">
-            <header className="App-header">
-                <form className="form-container">
-                    <label>Ingrese correo electronico</label>
-                    <br />
-                    <input name="email" type="text" value={this.state.email} onChange={this.handleChange} />
-                    <br />
-                    <input type="button" onClick={this.cancel} value='Cancelar' name="cancelar" />
-                    <input type="button" onClick={this.handleRecoverClick} value='Env. Email' name="recuperar"/>
-
-                </form>
-            </header>
-        </div>
-        <Footer />
-        </div>
-        )
-    }
-
     render() {
-       if(!this.state.recoverPassword){
-           return this.renderLogin();
-       }else{
-           return this.renderRecoverLogin();
-       }
-    }
+      if(this.state.selector === false){
+          return this.renderLogin();
+      }else{
+          return this.renderRecoverPasword();
+      }
+   }
 
-    renderLogin(){
-        return(
-            <div>
+   goToRecover(){
+     this.Setstate({selector:true})
+     alert(this.state.selector)
+   }
+
+   renderRecoverPasword(){
+     return(
+      <div >
+      <Carrusel />
+      <div class="home container">
+      <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">RECUPERA TU CONSTRASEÑA</h2>
+      <h3 class="text-center fw-bold super-container mt-3">Introduce tu correo y recibiras instrucciones para la recuperacion, si no ves el correo recuerda revisar la carpeta SPAM</h3>
+
+
+      <form onSubmit={()=> this.loginCliente(this.state.email,this.state.password) }>
+      <div className="container">
+      
+      <div class="mb-3 row">
+          <label for="nombre" class="col-sm-2 col-form-label">Correo</label>
+          <div class="col-sm-10">
+               <input name="email" onChange={this.handleChange} type="email" class="form-control" id="email" required/>
+               
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="password" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+               <input name="password" onChange={this.handleChange} type="password" class="form-control" id="password" />
+           </div>
+        </div>
+     
+        <button type="submit" className="btn btn-success">ENTRAR</button>
+       
+
+       </div>
+       </form>
+       <button type="submit" onSubmit={()=> this.goToRecover() } className="btn btn-primary">OLVIDASTE TU CONTRASEÑA</button>
+      </div>
+
+      <Footer />
+  </div>
+
+     )
+   }
+     
+    renderLogin() {
+        return (
+            <div >
                 <Carrusel />
-            <div className="App">
-                <header className="App-header">
-                    <form className="form-container">
-                        <label>Nombre Ususario</label>
-                        <br />
-                        <input name="username" type="text" value={this.state.username} onChange={this.handleChange} />
-                        <br />
-                        <label>Contraseña</label>
-                        <br />
-                        <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
-                        <br />
-                        <input type="button" onClick={()=>this.iniciarSesion()} value='Entrar' />
-                        <input type="button" onClick={this.recoverContraseña} value='Recuperar contraseña' />
+                <div class="home container">
+                <h2 class="text-center bg-secondary fw-bold super-container text-white mt-3">INICIO DE SESION</h2>
+                <h3 class="text-center fw-bold super-container mt-3">Introduce tu correo y contraseña</h3>
+   
+   
+          <form onSubmit={()=> this.loginCliente(this.state.email,this.state.password) }>
+                <div className="container">
+                
+                <div class="mb-3 row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Correo</label>
+                    <div class="col-sm-10">
+                         <input name="email" onChange={this.handleChange} type="email" class="form-control" id="email" required/>
+                         
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                         <input name="password" onChange={this.handleChange} type="password" class="form-control" id="password" />
+                     </div>
+                </div>
+               
+                <button type="submit" className="btn btn-success">ENTRAR</button>
+                
+          
+                </div>
+                </form>
+                <button onSubmit={()=> this.loginCliente(this.state.email,this.state.password) } className="btn btn-primary">OLVIDASTE TU CONTRASEÑA</button>
+                </div>
 
-                    </form>
-                </header>
-            </div>
-            <Footer />
+                <Footer />
             </div>
         )
-
     }
+    
 }

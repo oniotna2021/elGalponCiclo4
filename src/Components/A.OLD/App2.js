@@ -3,21 +3,21 @@ import './App.css';
 
 import { Routes, Route} from 'react-router-dom';
 
-import Comprar from "./Components/Comprar";
-import Contacto from "./Components/Contacto";
-import Home from "./Components/Home";
-import Login from "./Components/Login/Login";
-import About from "./Components/About";
-import NotFound from "./Components/NotFound";
-
-import ProductWrap from "./Components/Products/ProductWrap";
-import CrearProducto from "./Components/Products/CrearProducto";
-import SpecificProduct from "./Components/Products/SpecificProduct";
-import Registrar from './Components/Registrar';
-import Administrar from './Components/Administrar';
-import Header from './templates/Header';
-import EditarProducto from './Components/Products/EditarProducto'
-import Editar from './Components/Editar';
+import Comprar from "../Comprar";
+import Contacto from "../Contacto";
+import Home from "../Home";
+import logicLogin from "./Components/Login/logicLogin";
+import About from "../About";
+import NotFound from "../NotFound";
+import Products from "../Products/Products";
+import ProductWrap from "../Products/ProductWrap";
+import CrearProducto from "../Products/CrearProducto";
+import SpecificProduct from "../Products/SpecificProduct";
+import Registrar from '../Registrar';
+import Administrar from '../Administrar';
+import Header from '../../templates/Header';
+import EditarProducto from '../Products/EditarProducto'
+import Editar from '../Editar';
 
 
 
@@ -28,10 +28,10 @@ function App() {
       <Header />
 
       <Routes>
-         <Route path='/' element={<Home />}></Route>
-         <Route path='/login' element={<Login />}></Route>
+         <Route path='/el_galpon_ciclo_4' element={<Home />}></Route>
+         <Route path='/logicLogin' element={<logicLogin />}></Route>
           <Route path='/Products' element={<ProductWrap />}>
-             
+              <Route path='/Products' element={<Products />}></Route>
               <Route path='/Products/:id' element={<SpecificProduct />}></Route>
               <Route path='/Products/create' caseSensitive={false} element={<CrearProducto />}></Route>
               <Route path='/Products/edit' caseSensitive={false} element={<EditarProducto />}></Route>
@@ -43,7 +43,6 @@ function App() {
          <Route path='/Registrar' element={<Registrar />}></Route>
          <Route path='/Administrar' element={<Administrar />}></Route>
          <Route path='/Editar' element={<Editar />}></Route>
-         <Route path='/Editar?nombre=nombre&apellido=apellido&telefono=telefono' element={<Editar />}></Route>
 
 
        </Routes>
