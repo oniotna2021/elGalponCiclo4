@@ -28,7 +28,7 @@ function App() {
       <Header />
 
       <Routes>
-         <Route path='/el_galpon_ciclo_4' element={<Home />}></Route>
+         <Route path='/' element={<Home />}></Route>
          <Route path='/login' element={<Login />}></Route>
           <Route path='/Products' element={<ProductWrap />}>
              
@@ -43,6 +43,7 @@ function App() {
          <Route path='/Registrar' element={<Registrar />}></Route>
          <Route path='/Administrar' element={<Administrar />}></Route>
          <Route path='/Editar' element={<Editar />}></Route>
+         <Route path='/Editar?nombre=nombre&apellido=apellido&telefono=telefono' element={<Editar />}></Route>
 
 
        </Routes>

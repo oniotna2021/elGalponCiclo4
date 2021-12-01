@@ -21,7 +21,6 @@ export default class Registrar extends Component {
     }
 
     async agregarCliente(e){
-        console.log(this.state)
             fetch('http://localhost:4000/api/cliente',{
             method:'POST',
             body: JSON.stringify(this.state),
@@ -47,7 +46,6 @@ export default class Registrar extends Component {
         })
         .then( alert('Usuario registrado'))
         .catch(err => console.error(err))
-        // console.log(this.state);
         e.preventDefault();
     }
 

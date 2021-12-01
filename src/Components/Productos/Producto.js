@@ -18,7 +18,7 @@ export default function Producto(props) {
                 
                 <div className="product-action-vertical">
                     
-                    <div className="btn-product-icon btn-wishlist btn-expandable"><span>Añadir a Deseos</span></div>
+                  
                     <div className="btn-product-icon btn-quickview" title="Vista Rapida">
                     
                         <span>
@@ -29,7 +29,7 @@ export default function Producto(props) {
                 </div>
                 
                 <div className="product-action">
-                    <a href="prueba.html" className="btn-product btn-cart"><span>añadir al carro</span></a>
+                    <a href="prueba.html" className="btn-product btn-cart"><span>Ver detalle</span></a>
                 </div>
             </Link>   
           </figure>

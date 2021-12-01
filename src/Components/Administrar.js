@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../templates/Footer'
+
 
 export default class administrar extends Component {
     render() {
@@ -36,7 +36,6 @@ export default class administrar extends Component {
             </div>
               
             </div>
-          <Footer />
           </div>
           
         

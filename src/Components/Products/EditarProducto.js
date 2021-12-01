@@ -183,7 +183,7 @@ llamarProducto(id){
             </thead>
     </table>
 
-  {
+    {
   this.state.productos.map(producto => {
         return(
             <table class="table">
