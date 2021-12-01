@@ -23,7 +23,7 @@ export default function SpecificProduct(){
 
   useEffect(()=>{
     peticionProductGet();
-  })
+  },[])
 
   return (
       <div>
