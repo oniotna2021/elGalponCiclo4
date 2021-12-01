@@ -15,10 +15,8 @@ export default function SpecificProduct(){
 
   useEffect(()=>{
     peticionProductGet();
-<<<<<<< HEAD
   },[])
-=======
-    },[])
+
 
     
   const agregarAlCarrito=()=>{
@@ -60,8 +58,6 @@ export default function SpecificProduct(){
       console.log(error);
     })
   }
->>>>>>> 5bfde1e95cc5bc17ede8a078e17c837f08310aa6
-
   return (
       <div>
         <div class="page-wrapper">

@@ -12,7 +12,7 @@ import NotFound from "./Components/NotFound";
 
 import ProductWrap from "./Components/Products/ProductWrap";
 import CrearProducto from "./Components/Products/CrearProducto";
-import SpecificProduct from "./Components/Products/SpecificProduct";
+import SpecificProduct from "./Components/Products/SpecificProduct1";
 import Registrar from './Components/Registrar';
 import Administrar from './Components/Administrar';
 import Header from './templates/Header';
