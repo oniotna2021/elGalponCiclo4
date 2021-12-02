@@ -17,11 +17,12 @@ export default class logicLogin extends Component {
             this.handleChange = this.handleChange.bind(this);
             this.renderRecoverPasword = this.renderRecoverPasword.bind(this)
             this.loginCliente = this.loginCliente.bind(this);
+            this.goToRecover = this.goToRecover.bind(this);
             // this.componentDidMount = this.componentDidMount.bind(this)
     }
 
     // componentDidMount(){
-    //     this.loginCliente();
+    //     this.render();
     // }
 
     handleChange(e){
@@ -63,9 +64,13 @@ export default class logicLogin extends Component {
    }
 
    goToRecover(){
-     this.Setstate({selector:true})
-     alert(this.state.selector)
+     this.setState({selector:true})
    }
+
+   goToLogin(){
+    this.setState({selector:false})
+  }
+
 
    renderRecoverPasword(){
      return(
@@ -86,19 +91,15 @@ export default class logicLogin extends Component {
                
           </div>
         </div>
-        <div class="mb-3 row">
-          <label for="password" class="col-sm-2 col-form-label">Password</label>
-          <div class="col-sm-10">
-               <input name="password" onChange={this.handleChange} type="password" class="form-control" id="password" />
-           </div>
-        </div>
      
-        <button type="submit" className="btn btn-success">ENTRAR</button>
+        <button type="submit" className="btn btn-success">ENVIAR</button>
+        
        
 
        </div>
        </form>
-       <button type="submit" onSubmit={()=> this.goToRecover() } className="btn btn-primary">OLVIDASTE TU CONTRASEÑA</button>
+        <br />
+       <button onClick={()=> this.goToLogin()} className="btn btn-warning">Regresar al Login</button>
       </div>
 
       <Footer />
@@ -138,7 +139,8 @@ export default class logicLogin extends Component {
           
                 </div>
                 </form>
-                <button onSubmit={()=> this.loginCliente(this.state.email,this.state.password) } className="btn btn-primary">OLVIDASTE TU CONTRASEÑA</button>
+                <br />
+                <button onClick={()=> this.goToRecover()} className="btn btn-primary">OLVIDASTE TU CONTRASEÑA</button>
                 </div>
 
                 <Footer />

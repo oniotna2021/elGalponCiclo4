@@ -14,7 +14,6 @@ export default class Header extends Component {
     localStorage.removeItem('token'); 
     localStorage.removeItem('email');      
     window.location.reload();
-    window.history.back('/')
   } 
 
     render() {
@@ -63,6 +62,9 @@ export default class Header extends Component {
                   </Link>
                 </button> 
               <li className="nav-item">
+              <li className="nav-item">
+                <Link className="nav-link" to="/Favoritos">Mis Favoritos</Link>
+              </li> 
              
 
                 

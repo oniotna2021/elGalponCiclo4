@@ -17,11 +17,40 @@ export default function SpecificProduct(){
     peticionProductGet();
   },[])
 
+  const agregarFavorito=()=>{
+    const token=localStorage.getItem('token')
+  if(token){
+      const body={
+        email:localStorage.getItem('email'),
+        productoId:carrito.productId
+      }
+   
+      alert(JSON.stringify(body))
+      fetch('http://localhost:4000/api/favoritos',{
+      method:'POST',
+      body: JSON.stringify(body),
+      headers:{
+          'Accept':'application/json',
+          'Content-Type':'application/json'
+      }
+  }).then(res => res.json())
+  .then(data => {
+      console.log(data);
+  })
+  .then( alert('Favorito registrado'))
+  .catch(err => console.error(err))   
+      
+  }else{
+      alert('Debes iniciar sesion')
+  }
+  
+}
 
     
   const agregarAlCarrito=()=>{
-  
-    fetch('http://localhost:4000/api/carrito',{
+      const token=localStorage.getItem('token')
+    if(token){
+        fetch('http://localhost:4000/api/carrito',{
         method:'POST',
         body: JSON.stringify(carrito),
         headers:{
@@ -33,10 +62,12 @@ export default function SpecificProduct(){
         console.log(data);
     })
     .then( alert('Producto registrado'))
-    .catch(err => console.error(err))
-    // console.log(this.state);
-
-   
+    .catch(err => console.error(err))   
+        
+    }else{
+        alert('Debes iniciar sesion')
+    }
+    
 }
 
   const peticionProductGet=async ()=>{
@@ -114,7 +145,8 @@ export default function SpecificProduct(){
                                           <button onClick={()=> agregarAlCarrito() } className="btn-product btn-cart"><span>añadir al carro</span></button>
 
                                           <div class="details-action-wrapper">
-                                              <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>deseos</span></a>
+                                                    <button onClick={()=> agregarFavorito() } class="btn-product btn-wishlist" title="Wishlist"><span>Añadir a favoritos</span></button>
+
                                         
                                           </div>
                                       </div>
@@ -161,7 +193,7 @@ export default function SpecificProduct(){
 
                       <div class="product-details-action">
                           <button onClick={()=> this.agregarAlCarrito() } class="btn-product btn-cart"><span>Añadir al carro</span></button>
-                          <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>deseos</span></a>
+                          <button class="btn-product btn-wishlist" title="Wishlist"><span>Añadir a favoritos</span></button>
                       </div>
                   </div>
               </div>

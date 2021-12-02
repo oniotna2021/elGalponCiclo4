@@ -9,7 +9,6 @@ import Home from "./Components/Home";
 import Login from "./Components/Login/Login";
 import About from "./Components/About";
 import NotFound from "./Components/NotFound";
-
 import ProductWrap from "./Components/Products/ProductWrap";
 import CrearProducto from "./Components/Products/CrearProducto";
 import SpecificProduct from "./Components/Products/SpecificProduct1";
@@ -18,6 +17,7 @@ import Administrar from './Components/Administrar';
 import Header from './templates/Header';
 import EditarProducto from './Components/Products/EditarProducto'
 import Editar from './Components/Editar';
+import Favoritos from './Components/Favoritos'
 
 
 
@@ -44,8 +44,7 @@ function App() {
          <Route path='/Administrar' element={<Administrar />}></Route>
          <Route path='/Editar' element={<Editar />}></Route>
          <Route path='/Editar?nombre=nombre&apellido=apellido&telefono=telefono' element={<Editar />}></Route>
-
-
+         <Route path='/Favoritos' element={<Favoritos />}></Route>
        </Routes>
 
     </div>
