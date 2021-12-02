@@ -29,7 +29,7 @@ export default class Header extends Component {
           </button>
          
           <img className="logo-lgi navbar-brand" src={logoB} alt="Logo de El Galpón"></img>
-          <Link className="ms-3 navbar-brand" to="/el_galpon_ciclo_4">ElGalpon</Link>
+          <Link className="ms-3 navbar-brand" to="/">ElGalpon</Link>
           
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
