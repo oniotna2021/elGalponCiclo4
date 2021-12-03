@@ -51,6 +51,8 @@ export default class logicLogin extends Component {
           localStorage.setItem('apellido', data.apellido)
           localStorage.setItem('direccion', data.direccion)
           localStorage.setItem('email', data.email)
+          localStorage.setItem('clasificacion',data.clasificacion)
+          alert('Sesion iniciada')
         })
 
 
@@ -109,6 +111,8 @@ export default class logicLogin extends Component {
    }
      
     renderLogin() {
+      const token = localStorage.getItem('token')
+      if(!token){
         return (
             <div >
                 <Carrusel />
@@ -145,7 +149,13 @@ export default class logicLogin extends Component {
 
                 <Footer />
             </div>
-        )
+        )}else{
+          return(
+            <div>
+              <h1>Ya iniciaste sesion, puedes ver tu carrito</h1>
+            </div>
+          )
+        }
     }
     
 }

@@ -22,10 +22,11 @@ export default function SpecificProduct(){
   if(token){
       const body={
         email:localStorage.getItem('email'),
-        productoId:carrito.productId
+        productoId:carrito.productId,
+        id_dbproducto: carrito._id,
+        nombre:carrito.nombre,
+        precio_venta:carrito.precio_venta
       }
-   
-      alert(JSON.stringify(body))
       fetch('http://localhost:4000/api/favoritos',{
       method:'POST',
       body: JSON.stringify(body),

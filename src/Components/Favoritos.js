@@ -50,15 +50,15 @@ export default class Favoritos extends Component {
                 <br />
 
 
-                <div className="container d-flex">
+                <div className="containerProduct  d-flex">
         { 
           // eslint-disable-next-line array-callback-return
           this.state.deseados.map(function(item,i){
-            alert(item.email)
+            
           if(item.email===localStorage.getItem('email'))
           return(
             
-            <div class="card dieciocho">
+            <div class="card dieciocho mx-4 ">
             <img src="..." class="card-img-top" alt="..."/>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>

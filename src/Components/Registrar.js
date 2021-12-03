@@ -52,7 +52,8 @@ export default class Registrar extends Component {
     handleChange(e,text){
         const {name,value} = e.target;
         this.setState({
-            [name]:value
+            [name]:value,
+            clasificacion:'user'
         });
         console.log(e.target.value);
     }
@@ -110,12 +111,12 @@ export default class Registrar extends Component {
                          <input name="direccion" onChange={this.handleChange} type="text" className="form-control" id="direccion" />
                     </div>
                 </div>
-                <div className="mb-3 row">
+                {/* <div className="mb-3 row">
                     <label for="clasificacion" className="col-sm-2 col-form-label">Clasificacion</label>
                     <div className="col-sm-10">
                          <input name="clasificacion" onChange={this.handleChange} type="text" className="form-control" id="clasificacion" />
                     </div>
-                </div>
+                </div> */}
                 <div className="mb-3 row">
                     <label for="password" className="col-sm-2 col-form-label">Password</label>
                     <div className="col-sm-10">

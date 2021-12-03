@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 
+
 export default class administrar extends Component {
     render() {
+      if(localStorage.getItem('clasificacion')==='admin'){
         return (
         <div>
           <div className="containerProduct d-lg-flex">
@@ -39,6 +41,15 @@ export default class administrar extends Component {
           </div>
           
         
-        )
+        )}else{
+          return(
+            <div>
+          <h1>Debes iniciar sesion como administrador</h1>
+          <Link className="nav-link" to="/">INICIO</Link>
+          </div>
+          )
+        }
+      
+
     }
 }

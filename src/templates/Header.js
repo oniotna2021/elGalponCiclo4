@@ -12,7 +12,8 @@ export default class Header extends Component {
     localStorage.removeItem('apellido'); 
     localStorage.removeItem('direccion'); 
     localStorage.removeItem('token'); 
-    localStorage.removeItem('email');      
+    localStorage.removeItem('email');    
+    localStorage.removeItem('clasificacion')  
     window.location.reload();
   } 
 
@@ -49,7 +50,13 @@ export default class Header extends Component {
               </li>   
               <button className="btn btn-sm btn-outline-secondary" type="submit">
                   <Link className="nav-link" to="/Comprar">
-                  COMPRAR
+                  CARRITO
+                  <i className="bi-cart-fill me-1"></i>
+                  </Link>
+                </button>
+                <button className="btn btn-sm btn-outline-secondary" type="submit">
+                  <Link className="nav-link" to="/Login">
+                  LOGIN
                   <i className="bi-cart-fill me-1"></i>
                   </Link>
                 </button>
