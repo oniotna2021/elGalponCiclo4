@@ -17,8 +17,7 @@ export default class Favoritos extends Component {
             
             this.agregarFavorito = this.agregarFavorito.bind(this)
             this.llenarFavoritos = this.llenarFavoritos.bind(this)
-           
-           
+            this.agregarAlCarrito = this.agregarAlCarrito.bind(this)
     }
     
     componentDidMount(){
@@ -44,6 +43,10 @@ export default class Favoritos extends Component {
         })
     }
 
+    agregarAlCarrito(){
+      alert("Aqui vamos manito!");
+    }
+
     render() {
         return (
             <div>
@@ -62,11 +65,11 @@ export default class Favoritos extends Component {
           return(
             
             <div class="card dieciocho mx-4 ">
-            <img src="..." class="card-img-top" alt="..."/>
+            {/*<img src="..." class="card-img-top" alt="..."/>*/}
             <div class="card-body">
               <h5 class="card-title">{item.nombre}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p class="card-text">{item.precio_venta}</p>
+              <button class="btn btn-primary" onClick={()=>this.pruebas}>Añadir al carro</button>
             </div>
           </div>
                     )})  
