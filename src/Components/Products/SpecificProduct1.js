@@ -169,10 +169,10 @@ export default function SpecificProduct(){
 
 
           </div>
-          <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+          {/* <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button> */}
 
 
-          <div class="sticky-bar">
+          {/* <div class="sticky-bar">
           <div class="container">
               <div class="row">
                   <div class="col-6">
@@ -188,9 +188,9 @@ export default function SpecificProduct(){
                       <div class="product-price">
                         $ {producto.precio_venta}
                       </div>
-                      {/* <div class="product-details-quantity">
+                      <div class="product-details-quantity">
                           <input type="number" id="sticky-cart-qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required />
-                      </div> */}
+                      </div>
 
                       <div class="product-details-action">
                           <button onClick={()=> this.agregarAlCarrito() } class="btn-product btn-cart"><span>Añadir al carro</span></button>
@@ -199,7 +199,8 @@ export default function SpecificProduct(){
                   </div>
               </div>
           </div>
-      </div>
+      </div> */}
+      
   </div>
   )
 

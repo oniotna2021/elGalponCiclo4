@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Carrusel from '../../templates/Carrusel'
 import Footer from '../../templates/Footer'
 
@@ -152,8 +153,22 @@ export default class logicLogin extends Component {
         )}else{
           return(
             <div>
-              <h1>Ya iniciaste sesion, puedes ver tu carrito</h1>
+            <h3 className="mt-4">BIENVENIDO AL GALPON</h3>
+            <br />
+            <h4> Ya puedes ver tu carrito</h4>
+            <Link to="/Comprar">MI CARRITO</Link>
+            <br />
+            <br />
+            <h4 className="mt-4">O visitar nuestra tienda</h4>
+            <br />
+            <br />
+            <Link to="/">TIENDA</Link>
+            <br />
+            <div className="containerProduct">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxBi4Tc7OFN9SrwZDh8YZLdSG4lcYDQHyxcA&usqp=CAU" />
             </div>
+            </div>
+            
           )
         }
     }
