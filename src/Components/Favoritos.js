@@ -72,10 +72,8 @@ export default class Favoritos extends Component {
                     )})  
         }
         </div>
-                
-                <button onClick={()=> this.agregarFavorito() }>PROBAR</button>
                 <Footer />
-            </div>
+        </div>
         )
     }
 }

@@ -45,6 +45,9 @@ export default class administrar extends Component {
           return(
             <div>
           <h1>Debes iniciar sesion como administrador</h1>
+          <div className="containerProduct">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Stop_hand.svg/1024px-Stop_hand.svg.png" />
+          </div>
           <Link className="nav-link" to="/">INICIO</Link>
           </div>
           )
