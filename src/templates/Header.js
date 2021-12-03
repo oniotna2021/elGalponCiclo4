@@ -57,7 +57,7 @@ export default class Header extends Component {
                     className="btn btn-sm btn-outline-secondary" 
                     type="submit"
                     onClick={this.onClicDs}>
-                  <Link className="nav-link" to='/el_galpon_ciclo_4' >
+                  <Link className="nav-link" to='/' >
                     SALIR
                   </Link>
                 </button> 

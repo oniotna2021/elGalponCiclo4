@@ -48,11 +48,16 @@ export default class Favoritos extends Component {
                 <br />
                 <h1>Mis favoritos</h1>
                 <br />
+
+
+                <div className="container d-flex">
         { 
           // eslint-disable-next-line array-callback-return
           this.state.deseados.map(function(item,i){
+            alert(item.email)
           if(item.email===localStorage.getItem('email'))
           return(
+            
             <div class="card dieciocho">
             <img src="..." class="card-img-top" alt="..."/>
             <div class="card-body">
@@ -63,6 +68,7 @@ export default class Favoritos extends Component {
           </div>
                     )})  
         }
+        </div>
                 
                 <button onClick={()=> this.agregarFavorito() }>PROBAR</button>
                 <Footer />
