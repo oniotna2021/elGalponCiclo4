@@ -6,13 +6,12 @@ import {useEffect, useState} from 'react';
 export default function Comprar(){
  
   var [deseados, setDeseados]=useState([]);
-  var [suma, setSuma]=useState(0);
  
   useEffect(()=>{
    llenarFavoritos()
 }); 
 
-const aaa = ()=>{
+const agregarAlCarrito = ()=>{
   alert('jajaja')
 }
 
@@ -45,7 +44,7 @@ return(
           <h5 class="card-title">{item.nombre}</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-          <button onClick={()=> aaa() } >zzzz</button>
+          <button onClick={()=> agregarAlCarrito() } >zzzz</button>
         </div>
       </div>
                 )})  

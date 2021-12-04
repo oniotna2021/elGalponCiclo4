@@ -153,6 +153,8 @@ export default class logicLogin extends Component {
         )}else{
           return(
             <div>
+              <Carrusel />
+              <br />
             <h3 className="mt-4">BIENVENIDO AL GALPON</h3>
             <br />
             <h4> Ya puedes ver tu carrito</h4>
@@ -167,6 +169,11 @@ export default class logicLogin extends Component {
             <div className="containerProduct">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxBi4Tc7OFN9SrwZDh8YZLdSG4lcYDQHyxcA&usqp=CAU" />
             </div>
+            <br />
+            <Footer />
+
+
+
             </div>
             
           )

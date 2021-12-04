@@ -36,7 +36,8 @@ var CalcularTotal=()=>{
 
 
 var buscarCarritos=()=>{
-  let url='http://localhost:4000/api/carrito';
+  const email = localStorage.getItem('email')
+  let url='http://localhost:4000/api/carrito/'+email;
   axios.get(url)
   .then(res => {
     setCarritos(res.data)
@@ -45,8 +46,6 @@ var buscarCarritos=()=>{
     console.log(error); 
   });   
 }
-
-
 
 const SumarCantidad=(id,nombre,cantidad,precio_venta,productId)=>{
 
