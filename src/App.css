@@ -4,7 +4,18 @@
 
 .dieciocho{
   width: 18rem;
+  box-shadow: 3px 5px grey;
 }
+
+.dieciocho button{
+  background-color: antiquewhite;
+  border-top-color: antiquewhite;
+  border-top-style: inside;
+  border-top-left-radius: 45%;
+}
+
+.dieciocho.card{
+  background-color:beige};
 
 .h300{
   height: 300px;

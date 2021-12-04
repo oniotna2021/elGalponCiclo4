@@ -17,7 +17,7 @@ const agregarAlCarrito = ()=>{
 
 const llenarFavoritos=()=>{
     const email=localStorage.getItem('email')
-    fetch('http://localhost:4000/api/favoritos/'+email,{
+    fetch('http://localhost:4000/api/favoritos/',{
       METHOD: 'GET',
       headers: {
         'Accept': 'aplication/json',
@@ -38,14 +38,13 @@ return(
         { 
       deseados.map(function(item,i){ 
       return(
-        <div class="card dieciocho mx-4 ">
-        <img src="..." class="card-img-top" alt="..."/>
-        <div class="card-body">
-          <h5 class="card-title">{item.nombre}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-          <button onClick={()=> agregarAlCarrito() } >zzzz</button>
-        </div>
+        <div className="card dieciocho mx-2">
+          <div className="card-body">
+            <h5 className="card-title">{item.nombre}</h5>
+            <p className="card-text">precio:</p>
+            <p className="card-text">{item.precio_venta}</p>
+          </div>
+          <button className="btn btn-cart btn-product" onClick={()=> agregarAlCarrito() } >Añadir al carro</button>
       </div>
                 )})  
     }
