@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import imgExterior from "../assets/imgExterior.jpg";
-import imgInterior from "../assets/imgInterior.jpg";
 import Wilmar from "../assets/Wilmar.jpeg";
 import Antonio from "../assets/Antonio.jpg";
 import Jhon from "../assets/Jhon.jpg";
@@ -8,6 +7,7 @@ import Oscar from "../assets/Oscar.jpg";
 import Leidy from "../assets/Leidy.jpg";
 import Footer from "../templates/Footer";
 import Carrusel from "../templates/Carrusel";
+import GoogleMaps from "simple-react-google-maps";
 
 export default class About extends Component {
   render() {
@@ -60,6 +60,21 @@ export default class About extends Component {
                   <br />
                   Pitalito - Huila
                 </p>
+                <div className="container">
+                  <GoogleMaps
+                    apiKey={"AIzaSyDHHMCxCHt1Zq0A7JYQlvkUr9tHkaA3ZvE"}
+                    style={{ height: "480px", width: "auto" }}
+                    zoom={15}
+                    center={{
+                      lat: 1.8538217045111403,
+                      lng: -76.04673536711934,
+                    }}
+                    markers={[
+                      { lat: 1.8538217045111403, lng:  -76.04673536711934 },
+                      
+                    ]}
+                  />
+                </div>
 
                 <br />
                 <h1> Desarrolladores </h1>
