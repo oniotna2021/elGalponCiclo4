@@ -103,7 +103,7 @@ const restarCantidad=(id,nombre,cantidad,precio_venta,productId)=>{
   }).then(res => res.json())
   .then(data => {
       console.log(data);
-      window.location.reload();
+      // window.location.reload();
   })
   .catch(err => console.error(err))
   
