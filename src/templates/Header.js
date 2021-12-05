@@ -50,35 +50,27 @@ export default class Header extends Component {
               </li>   
               <button className="btn btn-sm btn-outline-secondary" type="submit">
                   <Link className="nav-link" to="/Comprar">
-                  CARRITO
-                  <i className="bi-cart-fill me-1"></i>
+                    CARRITO
+                    <i className="bi-cart-fill me-1"></i>
+                  </Link>
+                </button>
+                <button className="btn btn-sm btn-outline-secondary" type="submit">
+                  <Link className="nav-link" to="/Favoritos">
+                    MIS FAVORITOS
+                    <i className="bi-cart-fill me-1"></i>
                   </Link>
                 </button>
                 <button className="btn btn-sm btn-outline-secondary" type="submit">
                   <Link className="nav-link" to="/Login">
-                  LOGIN
-                  <i className="bi-cart-fill me-1"></i>
-                  </Link>
+                    LOGIN
+                    <i className="bi-cart-fill me-1"></i>
+                    </Link>
                 </button>
-                <button 
-                    className="btn btn-sm btn-outline-secondary" 
-                    type="submit"
-                    onClick={this.onClicDs}>
+                <button className="btn btn-sm btn-outline-secondary" type="submit" onClick={this.onClicDs}>
                   <Link className="nav-link" to='/' >
                     SALIR
                   </Link>
                 </button> 
-              <li className="nav-item">
-              <li className="nav-item">
-                <Link className="nav-link" to="/Favoritos">Mis Favoritos</Link>
-              </li> 
-             
-
-                
-              </li>
-                
-   
-          
           </ul>
              
           </div>

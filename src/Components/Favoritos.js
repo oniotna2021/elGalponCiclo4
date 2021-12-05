@@ -1,6 +1,8 @@
 import Footer from '../templates/Footer'
 import Carrusel from '../templates/Carrusel';
+import Login from './Login/Login';
 import {useEffect, useState} from 'react';
+import axios from 'axios';
 
 
 export default function Favoritos(){
@@ -14,17 +16,15 @@ export default function Favoritos(){
 
   const llenarFavoritos=()=>{
     const email=localStorage.getItem('email')
-    fetch('http://localhost:4000/api/favoritos/'+email,{
-      METHOD: 'GET',
-      headers: {
-        'Accept': 'aplication/json',
-        'Content-Type': 'application/json'
-      }
+    let url = 'http://localhost:4000/api/favoritos/'+email;
+    axios.get(url)
+    .then(res => {
+        setDeseados(res.data); 
     })
-    .then(res => res.json())
-    .then(data => {
-        setDeseados(data); 
-    })
+    .catch((error) => {
+      console.log('"error en la función llenarFavoritos');
+      console.log(error);
+    });
 }
 
   const agregarAlCarrito = () => {
@@ -56,6 +56,7 @@ export default function Favoritos(){
             })
     }
 
+  const generarComponente = () => {
   return(
       <div>
         <Carrusel />
@@ -80,6 +81,28 @@ export default function Favoritos(){
       <Footer />
       </div>
   )
+  }
 
+  const generarLogin = () => {
+    return(
+      <div>
+        <Login />
+      </div>
+    );
+  }
+
+  const chequearLogin = () => {
+    let token = localStorage.getItem('token');
+    if(token){
+      return generarComponente();
+    } else{
+      return generarLogin();
+    }
+  }
+
+  return(
+    <div>
+      {chequearLogin()}
+    </div>
+    );
 }
-
