@@ -39,9 +39,6 @@ export default class Contacto extends Component {
         .then( alert('Mensaje enviado'))
         .catch(err => console.error(err))  
     }
-
-
-
     render() {
         return (
             <div>

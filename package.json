@@ -24,6 +24,7 @@
     "react-scripts": "4.0.3",
     "react-strap": "^0.0.1",
     "reactstrap": "^9.0.1",
+    "simple-react-google-maps": "^1.1.2",
     "universal-cookie": "^4.0.4",
     "web-vitals": "^1.0.1"
   },

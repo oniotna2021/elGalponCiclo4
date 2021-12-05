@@ -8,7 +8,7 @@ import axios from 'axios';
 export default function Favoritos(){
  
   const [deseados, setDeseados]=useState([]);
-  const [carrito, setCarrito]= useState([]);
+  var [carrito, setCarrito]= useState([]);
  
   useEffect(()=>{
    llenarFavoritos()
@@ -27,9 +27,19 @@ export default function Favoritos(){
     });
 }
 
-  const agregarAlCarrito = () => {
-    prepararCarrito();
+  var agregarAlCarrito =(id_dbproducto,nombre,productoId,precio_venta) => {
+    
+    setCarrito({ 
+      email: localStorage.getItem('email'),
+      id_dbproducto: id_dbproducto,
+      nombre:nombre,
+      cantidad: 1,
+      productId: productoId,
+      precio_venta: precio_venta
+    })
+
     alert(JSON.stringify(carrito));
+
     fetch('http://localhost:4000/api/carrito',{
       method:'POST',
       body: JSON.stringify(carrito),
@@ -44,17 +54,6 @@ export default function Favoritos(){
     .then( alert(carrito.nombre + ' se agregó al carrito.'))
     .catch(err => console.error(err))   
   }
-
-  const prepararCarrito = () => {
-      setCarrito({ 
-              email: deseados.email,
-              id_dbproducto: deseados.id_dbproducto,
-              nombre:deseados.nombre,
-              cantidad: 1,
-              productId: deseados.productoId,
-              precio_venta: deseados.precio_venta
-            })
-    }
 
   const generarComponente = () => {
   return(
@@ -72,7 +71,7 @@ export default function Favoritos(){
               <p className="card-text">precio:</p>
               <p className="card-text">{item.precio_venta}</p>
             </div>
-            <button className="btn btn-cart btn-product" onClick={()=> agregarAlCarrito() } >Añadir al carro</button>
+            <button className="btn btn-cart btn-product" onClick={()=> agregarAlCarrito(item.id_dbproducto,item.nombre,item.productoId,item.precio_venta) } >Añadir al carro</button>
         </div>
         </div>
                   )})  

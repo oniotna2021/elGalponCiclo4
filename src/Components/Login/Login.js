@@ -47,13 +47,17 @@ export default class logicLogin extends Component {
       })
       .then(res =>res.json())
         .then(data =>{
-          localStorage.setItem('token', data.token)
-          localStorage.setItem('nombre', data.nombre)
-          localStorage.setItem('apellido', data.apellido)
-          localStorage.setItem('direccion', data.direccion)
-          localStorage.setItem('email', data.email)
-          localStorage.setItem('clasificacion',data.clasificacion)
-          alert('Sesion iniciada')
+          if(data.token!=null){
+            localStorage.setItem('token', data.token)
+            localStorage.setItem('nombre', data.nombre)
+            localStorage.setItem('apellido', data.apellido)
+            localStorage.setItem('direccion', data.direccion)
+            localStorage.setItem('email', data.email)
+            localStorage.setItem('clasificacion',data.clasificacion)
+            alert('Sesion iniciada')
+          }else{
+            alert('Usuario no existe !')
+          }
         })
 
 
