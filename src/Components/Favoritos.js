@@ -3,14 +3,14 @@ import Carrusel from '../templates/Carrusel';
 import {useEffect, useState} from 'react';
 
 
-export default function Comprar(){
+export default function Favoritos(){
  
   const [deseados, setDeseados]=useState([]);
   const [carrito, setCarrito]= useState([]);
  
   useEffect(()=>{
    llenarFavoritos()
-  });
+  }, []);
 
   const llenarFavoritos=()=>{
     const email=localStorage.getItem('email')
