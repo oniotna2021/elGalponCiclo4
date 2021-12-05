@@ -71,7 +71,7 @@ const SumarCantidad=(id,nombre,cantidad,precio_venta,productId)=>{
   }).then(res => res.json())
   .then(data => {
       console.log(data);
-      window.location.reload();
+     
   })
   .catch(err => console.error(err))
   
@@ -132,7 +132,7 @@ const eliminarCarrito=(id)=>{
     .then(res => res.json())
     .then(data => {
       console.log(data);
-      window.location.reload();
+      
     });
 }
 }
